@@ -1,0 +1,86 @@
+:block(select):mod(theme islands) {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    max-width: 100%;
+
+    vertical-align: bottom;
+
+    :block(select):elem(button) {
+        width: 100%;
+
+        text-align: left;
+        vertical-align: top;
+
+        :block(button):elem(text) {
+            display: block;
+
+            &:empty:before {
+                content: '\00a0';
+            }
+        }
+
+        &:block(button):mod(size s) {
+            :block(button):elem(text) {
+                padding-right: $select-button-size-s-paddingRight;
+            }
+
+            :block(icon) {
+                width: $select-button-size-s-icon-width;
+            }
+        }
+
+
+        &:block(button):mod(size m) {
+            :block(button):elem(text) {
+                padding-right: $select-button-size-m-paddingRight;
+            }
+
+            :block(icon) {
+                width: $select-button-size-m-icon-width;
+            }
+        }
+
+        &:block(button):mod(size l) {
+            :block(button):elem(text) {
+                padding-right: $select-button-size-l-paddingRight;
+            }
+
+            :block(icon) {
+                width: $select-button-size-l-icon-width;
+            }
+        }
+
+        &:block(button):mod(size xl) {
+            :block(button):elem(text) {
+                padding-right: $select-button-size-xl-paddingRight;
+            }
+
+            :block(icon)
+            {
+                width: $select-button-size-xl-icon-width;
+            }
+        }
+    }
+
+    :block(select):elem(tick) {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        background-image: $select-tick-background;
+
+        transition: transform 0.1s ease-out;
+    }
+
+    &:block(select):mod(size s) :block(select):elem(tick) {
+        background-image: $select-tick-size-s-background;
+    }
+
+    &:block(select):mod(opened) :block(select):elem(tick) {
+        transform: rotate(-180deg);
+    }
+
+    &:block(select):mod(width available) {
+        width: 100%;
+    }
+}

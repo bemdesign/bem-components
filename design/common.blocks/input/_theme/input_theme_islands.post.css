@@ -1,0 +1,254 @@
+:block(input):mod(theme islands) {
+    font-family: $input-fontFamily;
+
+    position: relative;
+
+    display: inline-block;
+
+    background: $color-border;
+
+    -webkit-tap-highlight-color: $color-border-hover;
+
+    border-radius: $input-borderRadius;
+
+    /* Decorative element (inner background) */
+    &:before {
+        position: absolute;
+        top: $input-before-space;
+        right: $input-before-space;
+        bottom: $input-before-space;
+        left: $input-before-space;
+        border-radius: $input-before-borderRadius;
+
+        content: '';
+
+        background: $color-default;
+    }
+
+    :block(input):elem(box) {
+        position: relative;
+
+        display: block;
+
+        -webkit-touch-callout: none;
+
+        user-select: none;
+    }
+
+    :block(input):elem(control) {
+        font: inherit;
+        line-height: inherit;
+
+        position: relative;
+
+        display: inline-block;
+
+        box-sizing: border-box;
+        padding: 0;
+        width: 100%;
+
+        border: 0;
+        outline: none;
+        background: none;
+
+        -webkit-appearance: none;
+
+        /*лишние отступы у текста*/
+        &::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /*нативный крестик*/
+        &::-webkit-search-cancel-button {
+            display: none;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-typo-placeholder;
+            text-indent: 0;
+        }
+
+        &::-moz-placeholder {
+            opacity: 1;
+            color: $color-typo-placeholder;
+        }
+
+        &::-ms-clear {
+            display: none;
+        }
+
+        &::-webkit-autofill {
+            border: 1px solid transparent;
+            background-clip: padding-box;
+        }
+    }
+
+    &:block(input):mod(has-clear) :block(input):elem(control) {
+        text-overflow: ellipsis;
+    }
+
+    :block(input):elem(clear) {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        cursor: text;
+        transition: opacity 0.1s ease-out;
+
+        opacity: 0;
+        background: 50% 50% no-repeat;
+
+        &:mod(visible) {
+            opacity: 0.3;
+
+            &:hover {
+                cursor: pointer;
+
+                opacity: 1;
+            }
+        }
+    }
+
+    &:block(input):mod(focused) {
+        z-index: 1;
+
+        &:before {
+            box-shadow: $input-focused-boxShadow $color-border-focus, inset $input-focused-inset-boxShadow $color-border-focus; /* */
+        }
+
+        :block(input):elem(control) {
+            text-overflow: clip; /* fix ellipsis bug in Chrome */
+        }
+    }
+
+    &:block(input):mod(disabled) {
+        background: $color-border-disable;
+
+        &:before,
+        :block(input):elem(clear) {
+            display: none;
+        }
+
+        :block(input):elem(box),
+        :block(input):elem(control) {
+            color: $color-disable;
+            cursor: default;
+        }
+    }
+
+    &:block(input):mod(size s) :block(input):elem(clear),
+    &:block(input):mod(size m) :block(input):elem(clear) {
+        width: $input-size-s-m-clear-width; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс s-m*/
+        height: $input-size-s-m-clear-height; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс s-m*/
+
+        background-image: url(../../theme/_islands/clear_size_s.svg);
+        background-position: 7px 50%;
+    }
+
+    &:block(input):mod(size s) {
+        font-size: $input-size-s-fontSize;
+        line-height: $input-size-s-lineHeight;
+
+        :block(input):elem(control) {
+            height: $input-size-s-control-height;
+            padding: $input-size-s-control-padding;
+        }
+
+        &:block(input):mod(has-clear) :block(input):elem(control) {
+            padding-right: $input-size-s-has-clear-paddingRight;
+        }
+
+    }
+
+    &:block(input):mod(size m) {
+        font-size: $input-size-m-fontSize;
+        line-height: $input-size-m-lineHeight;
+
+        :block(input):elem(control) {
+            height: $input-size-m-control-height;
+            padding: $input-size-m-control-padding;
+        }
+
+        &:block(input):mod(has-clear) :block(input):elem(control) {
+            padding-right: $input-size-m-has-clear-paddingRight;
+        }
+
+        :block(input):elem(clear) {
+            width: $input-size-m-clear-width;
+            height: $input-size-m-clear-height;
+
+            background-position: 9px 50%;
+        }
+    }
+
+    &:block(input):mod(size l) :block(input):elem(clear),
+    &:block(input):mod(size xl) :block(input):elem(clear) {
+        width: $input-size-l-xl-clear-width; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс l-xl*/
+        height: $input-size-l-xl-clear-height; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс l-xl*/
+
+        background-image: url(../../theme/_islands/clear_size_l.svg);
+        background-position: 9px 50%;
+    }
+
+    &:block(input):mod(size l) {
+        font-size: $input-size-l-fontSize;
+        line-height: $input-size-l-lineHeight;
+
+        :block(input):elem(control) {
+            height: $input-size-l-control-height;
+            padding: $input-size-l-control-padding;
+        }
+
+        &:block(input):mod(has-clear) :block(input):elem(control) {
+            padding-right: $input-size-l-has-clear-paddingRight;
+        }
+    }
+
+    &:block(input):mod(size xl) {
+        font-size: $input-size-xl-fontSize;
+        line-height: $input-size-xl-lineHeight;
+
+        :block(input):elem(control) {
+            height: $input-size-xl-control-height;
+            padding: $input-size-xl-control-padding;
+        }
+
+        &:block(input):mod(has-clear) :block(input):elem(control) {
+            padding-right: $input-size-xl-has-clear-paddingRight;
+        }
+
+        :block(input):elem(clear) {
+            width: $input-size-xl-clear-width;
+            height: $input-size-xl-clear-height;
+
+            background-position: 12px 50%;
+        }
+    }
+
+    &:block(input):mod(has-clear) :block(input):elem(control) {
+        padding-right: 0;
+    }
+
+    &:block(input):mod(width available) {
+        width: 100%;
+    }
+
+    &:block(input):mod(type password) :block(input):elem(control) {
+        text-overflow: clip;
+    }
+}
+
+:block(control-group) {
+    :block(input):mod(theme islands) {
+        &:before {
+            right: $control-group-before-right;
+        }
+    }
+
+    > :block(input):mod(theme islands):last-child,
+    > :last-child :block(input):mod(theme islands) {
+        &:before {
+            right: $control-group-last-child-right;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+:block(checkbox):mod(theme islands) {
+    position: relative; /* fix #1538 */
+
+    font-family: $checkbox-fontFamily;
+
+    -webkit-tap-highlight-color: $color-typo-primary;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    :block(checkbox):elem(control) {
+        position: absolute;
+        z-index: -1;
+
+        margin: 0;
+
+        opacity: 0;
+    }
+
+    :block(checkbox):elem(box) {
+        position: relative;
+
+        display: inline-block;
+
+        border-radius: 3px;
+        background: $color-border;
+
+        &:before {
+            position: absolute;
+            top: $checkbox-before-space;
+            right: $checkbox-before-space;
+            bottom: $checkbox-before-space;
+            left: $checkbox-before-space;
+
+            content: '';
+
+            border-radius: $checkbox-before-borderRadius;
+            background: $color-default;
+        }
+
+        &:after {
+            position: absolute;
+            top: $checkbox-after-space;
+            left: $checkbox-after-space;
+
+            content: '';
+            width: 16px;
+            height: 16px;
+
+            background-image: $checkbox-tip;
+            background-size: 100%;
+
+            visibility: hidden;
+            opacity: 0;
+
+            transition: transform .05s ease-out, opacity .05s ease-out, visibility 0s linear .05s;
+        }
+    }
+
+    &:block(checkbox):mod(size m) {
+        font-size: $checkbox-size-m-fontSize;
+
+        :block(checkbox):elem(box) {
+            line-height: $checkbox-size-m-lineHeight;
+
+            top: $checkbox-size-m-top;
+
+            width: $checkbox-size-m-width;
+            height: $checkbox-size-m-height;
+            margin-right: $checkbox-size-m-marginRight;
+
+            &:after {
+                /*width: $checkbox-size-m-after-width;*/
+                /*height: $checkbox-size-m-after-height;*/
+
+                transform: translateY($checkbox-size-m-transformY);
+            }
+        }
+    }
+
+    &:block(checkbox):mod(size l) {
+        font-size: $checkbox-size-l-fontSize;
+
+        :block(checkbox):elem(box) {
+            line-height: $checkbox-size-l-lineHeight;
+
+            top: $checkbox-size-l-top;
+
+            width: $checkbox-size-l-width;
+            height: $checkbox-size-l-height;
+            margin-right: $checkbox-size-l-marginRight;
+
+            &:after {
+                /*width: $checkbox-size-l-after-width;*/
+                /*height: $checkbox-size-l-after-height;*/
+
+                transform: translateY($checkbox-size-l-transformY);
+            }
+        }
+    }
+
+    &:block(checkbox):mod(checked) {
+        :block(checkbox):elem(box) {
+            background: $color-border-check;
+
+            &:before {
+                background: $color-check;
+            }
+
+            &:after {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0px);
+
+                transition-delay: 0s;
+            }
+        }
+    }
+
+    &:block(checkbox):mod(focused) {
+        :block(checkbox):elem(box):before {
+            /* Цвет тени (бордера) чекнутого чекбокса кнопки по ховеру */  /*box-shadow: $checkbox-focused-boxShadow $project, inset $checkbox-focused-inset-boxShadow $project; */
+        }
+    }
+
+    &:block(checkbox):mod(hovered) {
+        :block(checkbox):elem(box) {
+            background: $color-border-hover;
+        }
+
+        &:block(checkbox):mod(checked) :block(checkbox):elem(box) {
+            background: $color-border-check-hover;
+        }
+    }
+
+    &:block(checkbox):mod(disabled) {
+        cursor: default;
+
+        color: $color-typo-disable;
+
+        :block(checkbox):elem(box) {
+            background: $color-disable;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &:block(checkbox):mod(checked) :block(checkbox):elem(box) {
+            background: $color-disable-check;
+
+            &:after {
+                opacity: $checkbox-disabled-checked-opacity;
+            }
+        }
+    }
+
+    &:block(checkbox):mod(type button) {
+        display: inline-block;
+    }
+
+    &:block(checkbox):mod(type line) {
+        &:block(checkbox):mod(size m) {
+            margin-right: $checkbox-line-size-m-marginRight;
+        }
+
+        &:block(checkbox):mod(size l) {
+            margin-right: $checkbox-line-size-l-marginRight;
+        }
+
+        &:last-child
+        {
+            margin-right: $checkbox-line-last-child-marginRight;
+        }
+    }
+}
+
+/* hack for Safari only */
+_::-webkit-full-page-media,
+_:future,
+:root :block(checkbox):mod(theme islands) :block(checkbox):elem(box) {
+    pointer-events: none; /* NOTE: Fix #1472 and #1590 */
+}

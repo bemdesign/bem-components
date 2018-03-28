@@ -1,0 +1,48 @@
+:block(link):mod(theme islands) {
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: $color-link;
+    cursor: pointer;
+    transition: $link-transition;
+    text-decoration: $link-textDecoration;
+
+    -webkit-tap-highlight-color: $color-link-hover;
+
+    &:block(link):mod(view minor) {
+        color: $color-link-hover;
+    }
+
+    &:block(link):mod(view external) {
+        color: $color-link-external;
+    }
+
+    &:block(link):mod(view ghost) {
+        color: $color-link-ghost;
+        &:hover {
+            color: $color-link-ghost-hover
+        }
+    }
+
+    &:block(link):mod(view text) {
+        color: $color-typo-primary;
+    }
+
+    &:block(link):mod(view strong) {
+        font-weight: bold;
+    }
+
+    &:hover {
+        color: $color-link-hover;
+    }
+
+    @each $size, $val in (s, m, l, xl), ($link-size-s, $link-size-m, $link-size-l, $link-size-xl) {
+        &:block(link):mod(size $size) {
+            font-size: $val;
+        }
+    }
+
+    &:block(link):mod(disabled) {
+        color: #ddd;
+        -webkit-tap-highlight-color: $color-base;
+    }
+}

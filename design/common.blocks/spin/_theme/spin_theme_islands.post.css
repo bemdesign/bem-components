@@ -1,0 +1,61 @@
+:block(spin):mod(theme islands) {
+
+    position: absolute;
+
+    display: inline-block;
+    visibility: hidden;
+
+    box-sizing: border-box;
+
+    border: $spin-borderWidth solid transparent;
+    border-radius: 50%;
+
+    &:after {
+        content: '\00A0';
+    }
+
+    &:block(spin):mod(visible) {
+        position: relative;
+
+        visibility: visible;
+
+        animation: spin_theme_islands 1s infinite linear;
+
+        background: 0 0 no-repeat url(spin_theme_islands.gif);
+
+        /* `1deg` is needed to prevent FF bug after minification (`0deg` => `0`) */
+        background: linear-gradient(1deg, $color-default, $color-default);
+
+        backface-visibility: hidden; /* Accelerate animation */
+    }
+
+    $bgShift: -($spin-borderWidth);
+
+    @each $size, $val in
+    (xs,   s,     m,     l,     xl),  /* size */
+    ($size-list-xs, $size-list-s,  $size-list-m,  $size-list-l,  $size-list-xl) /* val */ {
+        &:block(spin):mod(size $size) {
+            line-height: $val;
+
+            width: $val;
+            height: $val;
+
+            background-position: -($spin-borderWidth) $bgShift;
+        }
+
+        $bgShift: calc($bgShift - ($val + 1));
+    }
+}
+
+@keyframes spin_theme_islands {
+    from {
+        border-top-color: $color-border-focus;
+        border-left-color: $color-border-focus;
+        transform: rotate(0);
+    }
+    to {
+        border-top-color: $color-border-focus;
+        border-left-color: $color-border-focus;
+        transform: rotate(360deg);
+    }
+}

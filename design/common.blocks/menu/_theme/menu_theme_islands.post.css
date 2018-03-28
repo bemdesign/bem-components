@@ -1,0 +1,76 @@
+:block(menu):mod(theme islands) {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    box-sizing: border-box;
+
+    user-select: none;
+
+    outline: 0;
+    background: $menu-background;
+
+    -webkit-tap-highlight-color: $menu-background;
+
+    /* Using pseudo-elements intead of paddings because of Firefox bug with bottom padding (#1158):
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=748518 */
+    &:before,
+    &:after {
+        display: block;
+
+        content: '';
+    }
+
+    @each $size, $fontSize, $lineHeight, $paddingVert, $paddingHor in
+    (s,    m,    l,    xl),
+    ($menu-size-s-fontSize, $menu-size-m-fontSize, $menu-size-l-fontSize, $menu-size-xl-fontSize),  /* fontSize */
+    ($menu-size-s-lineHeight, $menu-size-m-lineHeight, $menu-size-l-lineHeight, $menu-size-xl-lineHeight), /* lineHeight */
+    ($menu-size-s-vertSpace,  $menu-size-m-vertSpace,  $menu-size-l-vertSpace,  $menu-size-xl-vertSpace),   /* paddingVer */
+    ($menu-size-s-horSpace, $menu-size-m-horSpace, $menu-size-l-horSpace, $menu-size-xl-horSpace)   /* paddingHor */ {
+        &:block(menu):mod(size $size) {
+            font-size: $fontSize;
+            line-height: $lineHeight;
+
+            &:before,
+            &:after {
+                height: $paddingVert;
+            }
+
+            :block(menu-item) + :block(menu):elem(group) {
+                margin-top: $paddingVert;
+            }
+
+            :block(menu):elem(group) {
+                padding: $paddingVert 0;
+
+                &-title {
+                    padding: 0 $paddingHor;
+                }
+            }
+        }
+    }
+
+    :block(menu):elem(group) {
+        border: $menu-group-borderWidth solid  $color-border;
+        border-width: 1px 0;
+
+        &-title {
+            color: $color-typo-primary;
+
+        }
+
+        & + :block(menu):elem(group) {
+            border-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+
+            border-bottom: 0;
+        }
+
+        &:first-child {
+            padding-top: 0;
+
+            border-top: 0;
+        }
+    }
+}
