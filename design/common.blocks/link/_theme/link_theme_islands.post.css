@@ -1,30 +1,30 @@
 :block(link):mod(theme islands) {
 
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: $color-link;
+    color: var(--color-link);
     cursor: pointer;
     transition: $link-transition;
     text-decoration: $link-textDecoration;
 
-    -webkit-tap-highlight-color: $color-link-hover;
+    -webkit-tap-highlight-color: var(--color-link-hover);
 
     &:block(link):mod(view minor) {
-        color: $color-link-hover;
+        color: var(--color-link-hover);
     }
 
     &:block(link):mod(view external) {
-        color: $color-link-external;
+        color: var(--color-link-external);
     }
 
     &:block(link):mod(view ghost) {
-        color: $color-link-ghost;
+        color: var(--color-link-ghost);
         &:hover {
-            color: $color-link-ghost-hover
+            color: var(--color-link-ghost-hover);
         }
     }
 
     &:block(link):mod(view text) {
-        color: $color-typo-primary;
+        color: var(--color-typo-primary);
     }
 
     &:block(link):mod(view strong) {
@@ -32,7 +32,7 @@
     }
 
     &:hover {
-        color: $color-link-hover;
+        color: var(--color-link-hover);
     }
 
     @each $size, $val in (s, m, l, xl), ($link-size-s, $link-size-m, $link-size-l, $link-size-xl) {
@@ -43,6 +43,6 @@
 
     &:block(link):mod(disabled) {
         color: #ddd;
-        -webkit-tap-highlight-color: $color-base;
+        -webkit-tap-highlight-color: var(--color-base);
     }
 }

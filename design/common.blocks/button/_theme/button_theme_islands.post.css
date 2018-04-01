@@ -10,16 +10,16 @@
 
     user-select: none;
 
-    color: $color-typo-primary;
+    color: var(--color-typo-inverse); /* !!! */
     border: 0;
     border-radius: $button-borderRadius;
     outline: 0;
-    background: $color-border;
+    background: var(--color-border);
 
     text-align: center;
     white-space: nowrap;
 
-    -webkit-tap-highlight-color: $color-typo-primary;
+    -webkit-tap-highlight-color: var(--color-typo-primary);
 
     &::-moz-focus-inner {
         padding: 0;
@@ -62,13 +62,13 @@
     &:block(button):mod(hovered) {
         cursor: pointer;
 
-        background: $color-border-hover;
+        background: var(--color-border-hover);
     }
 
     &:block(button):mod(focused-hard) {
         z-index: 1;
 
-        background: $color-border-focus;
+        background: var(--color-border-focus);
 
         &:block(button):before {
             box-shadow: $button-focused-boxShadow $color-border-focus, inset $button-focused-boxShadow-inset $color-border-focus;
@@ -76,26 +76,26 @@
     }
 
     &:block(button):mod(pressed):before {
-        background: $color-press;
+        background: var(--color-press);
     }
 
     &:block(button):mod(checked) {
-        background: $color-border-check;
+        background: var(--color-border-check);
 
         &:before {
-            background: $color-check;
+            background: var(--color-check);
         }
 
         &:block(button):mod(pressed) {
-            background: $color-border-check-press;
+            background: var(--color-border-check-press);
 
             &:before {
-                background: $color-check-press;
+                background: var(--color-check-press);
             }
         }
 
         &:block(button):mod(hovered) {
-            background: $color-border-check-hover;
+            background: var(--color-border-check-hover);
         }
     }
 
@@ -103,14 +103,14 @@
         background: none;
 
         &:block(button):mod(pressed) {
-            background: $color-press;
+            background: var(--color-press);
         }
 
         &:block(button):mod(checked) {
-            background: $color-check;
+            background: var(--color-check);
 
             &:block(button):mod(pressed) {
-                background: $color-check-press;
+                background: var(--color-check-press);
             }
         }
 
@@ -120,18 +120,18 @@
     }
 
     &:block(button):mod(view action) {
-        background: $color-action;
+        background: var(--color-action);
 
         &:before {
             display: none;
         }
 
         &:block(button):mod(hovered) {
-            background: $color-action-hover;
+            background: var(--color-action-hover);
         }
 
         &:block(button):mod(pressed) {
-            background: $color-action-press; /* 77777 сильно желтый / проверить */
+            background: var(--color-action-press); /* 77777 сильно желтый / проверить */
         }
 
         &:block(button):mod(focused-hard) {
@@ -156,12 +156,12 @@
         }
 
         &:block(button):mod(pressed):before {
-            background: $color-border-press;
+            background: var(--color-border-press);
         }
 
         &:block(button):mod(checked) {
             &:before {
-                background: $color-check;
+                background: var(--color-check);
                 box-shadow: $button-checked-before-boxShadow $color-border-check;
             }
 
@@ -177,18 +177,18 @@
     }
 
     &:block(button):mod(disabled) {
-        background: $color-disable;
+        background: var(--color-disable);
 
         &:before {
             display: none;
         }
 
         &:block(button):mod(checked) {
-            background: $color-disable-check;
+            background: var(--color-disable-check);
         }
 
         :block(button):elem(text) {
-            color: $color-typo-disable;
+            color: var(--color-typo-disable);
         }
 
         :block(icon) {
@@ -259,11 +259,11 @@
 
 @keyframes button-action-focus {
     from {
-        background-color: $color-action;
+        background-color: var(--color-action);
     }
 
     to {
-        background-color: $color-action-focus;
+        background-color: var(--color-action-focus);
     }
 }
 

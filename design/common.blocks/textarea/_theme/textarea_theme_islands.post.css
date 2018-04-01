@@ -3,32 +3,32 @@
 
     display: inline-block;
 
-    background: $color-default;
+    background: var(--color-default);
 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     min-height: $textarea-minHeight;
 
-    border: $textarea-borderWidth solid $color-border;
+    border: $textarea-borderWidth solid var(--color-border);
     outline: none;
 
     -webkit-appearance: none;
-    -webkit-tap-highlight-color: $color-typo-primary;
+    -webkit-tap-highlight-color: var(--color-typo-primary);
 
     &::-webkit-input-placeholder {
-        color: $color-border;
+        color: var(--color-border);
         text-indent: 0;
     }
 
     &::-moz-placeholder {
         opacity: 1;
-        color: $color-typo-placeholder;
+        color: var(--color-typo-placeholder);
     }
 
     &:block(textarea):mod(focused) {
-        border-color: $color-border-focus;
-        box-shadow: $textarea-focused-boxShadow $color-border-focus;
+        border-color: var(--color-border-focus);
+        box-shadow: $textarea-focused-boxShadow var(--color-border-focus);
     }
 
     &:block(textarea):mod(width available) {
@@ -41,9 +41,9 @@
         resize: none;
         cursor: default;
 
-        color: $color-typo-disable;
+        color: var(--color-typo-disable);
         border-color: transparent;
-        background: $color-disable; /*       */
+        background: var(--color-disable); /*       */
     }
 
     &:block(textarea):mod(size s) {

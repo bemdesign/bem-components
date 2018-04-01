@@ -49,11 +49,11 @@
     }
 
     :block(menu):elem(group) {
-        border: $menu-group-borderWidth solid  $color-border;
+        border: $menu-group-borderWidth solid  var(--color-border);
         border-width: 1px 0;
 
         &-title {
-            color: $color-typo-primary;
+            color: var(--color-typo-primary);
 
         }
 

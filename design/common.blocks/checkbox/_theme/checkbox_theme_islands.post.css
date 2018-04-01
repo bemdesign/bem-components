@@ -3,7 +3,7 @@
 
     font-family: $checkbox-fontFamily;
 
-    -webkit-tap-highlight-color: $color-typo-primary;
+    -webkit-tap-highlight-color: var(--color-typo-primary);
 
     &:hover {
         cursor: pointer;
@@ -24,7 +24,7 @@
         display: inline-block;
 
         border-radius: 3px;
-        background: $color-border;
+        background: var(--color-border);
 
         &:before {
             position: absolute;
@@ -36,7 +36,7 @@
             content: '';
 
             border-radius: $checkbox-before-borderRadius;
-            background: $color-default;
+            background: var(--color-default);
         }
 
         &:after {
@@ -102,10 +102,10 @@
 
     &:block(checkbox):mod(checked) {
         :block(checkbox):elem(box) {
-            background: $color-border-check;
+            background: var(--color-border-check);
 
             &:before {
-                background: $color-check;
+                background: var(--color-check);
             }
 
             &:after {
@@ -126,21 +126,21 @@
 
     &:block(checkbox):mod(hovered) {
         :block(checkbox):elem(box) {
-            background: $color-border-hover;
+            background: var(--color-border-hover);
         }
 
         &:block(checkbox):mod(checked) :block(checkbox):elem(box) {
-            background: $color-border-check-hover;
+            background: var(--color-border-check-hover);
         }
     }
 
     &:block(checkbox):mod(disabled) {
         cursor: default;
 
-        color: $color-typo-disable;
+        color: var(--color-typo-disable);
 
         :block(checkbox):elem(box) {
-            background: $color-disable;
+            background: var(--color-disable);
 
             &:before {
                 display: none;
@@ -148,7 +148,7 @@
         }
 
         &:block(checkbox):mod(checked) :block(checkbox):elem(box) {
-            background: $color-disable-check;
+            background: var(--color-disable-check);
 
             &:after {
                 opacity: $checkbox-disabled-checked-opacity;
