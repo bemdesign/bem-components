@@ -10,7 +10,7 @@
 
     user-select: none;
 
-    color: var(--color-typo-inverse); /* !!! */
+    color: var(--color-typo-primary); /* !!! */
     border: 0;
     border-radius: $button-borderRadius;
     outline: 0;
@@ -121,6 +121,7 @@
 
     &:block(button):mod(view action) {
         background: var(--color-action);
+        color: var(--color-typo-inverse); /* !!! */
 
         &:before {
             display: none;
