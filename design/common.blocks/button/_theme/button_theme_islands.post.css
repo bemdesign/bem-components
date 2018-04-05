@@ -14,7 +14,7 @@
     border: 0;
     border-radius: $button-borderRadius;
     outline: 0;
-    background: var(--color-border);
+    background: var(--color-ghost); /* !!! */
 
     text-align: center;
     white-space: nowrap;
@@ -39,6 +39,7 @@
 
     :block(icon) {
         position: relative;
+        height: 100%;
     }
 
     &:block(button):mod(type link) {
@@ -62,7 +63,7 @@
     &:block(button):mod(hovered) {
         cursor: pointer;
 
-        background: var(--color-border-hover);
+        background: var(--color-hover);
     }
 
     &:block(button):mod(focused-hard) {
@@ -80,7 +81,8 @@
     }
 
     &:block(button):mod(checked) {
-        background: var(--color-border-check);
+        background: var(--color-check); /* !!! */
+        color: var(--color-typo-primary);
 
         &:before {
             background: var(--color-check);
@@ -95,7 +97,7 @@
         }
 
         &:block(button):mod(hovered) {
-            background: var(--color-border-check-hover);
+            background: var(--color-hover);
         }
     }
 

@@ -19,6 +19,7 @@
         cursor: pointer;
 
         background-color: $color-hover;
+        color: $color-typo-primary;
     }
 
     &:block(menu):elem(item):mod(type link) {

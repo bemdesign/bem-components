@@ -43,7 +43,7 @@
             background-position: -($spin-borderWidth) $bgShift;
         }
 
-        $bgShift: calc($bgShift - ($val + 1));
+        /*$bgShift: calc($bgShift - ($val + 1));*/
     }
 }
 

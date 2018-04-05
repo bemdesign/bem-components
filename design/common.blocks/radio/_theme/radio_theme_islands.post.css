@@ -54,6 +54,9 @@
                 top: $radio-size-m-after;
                 left: $radio-size-m-after;
 
+                margin-top: calc($radio-width-m-after / -2);
+                margin-left: calc($radio-height-m-after / -2);
+
                 width: $radio-width-m-after;
                 height: $radio-height-m-after;
             }
@@ -75,6 +78,9 @@
             &:after {
                 top: $radio-size-l-after;
                 left: $radio-size-l-after;
+
+                margin-top: calc($radio-width-l-after / -2);
+                margin-left: calc($radio-height-l-after / -2);
 
                 width: $radio-width-l-after;
                 height: $radio-height-l-after;
