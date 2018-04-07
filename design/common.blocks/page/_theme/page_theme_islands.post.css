@@ -12,18 +12,6 @@ html {
 	background: #fff;
 
 
-
-	/* Базовые цвета от которых выстраивается вся политра */
-	$color-base: #000000; /* hsl(0, 0%, 0%) */
-	$color-essential: #fff; /* hsl(0, 0%, 100%) */
-	$color-project: #0056b3; /* hsl(211, 100%, 35%) */
-	$color-phantom: #000; /* hsl(40, 14%, 96%) */
-	$color-radical: #e00; /* hsl(0, 100%, 47%) */
-	$color-path: #0070f0; /* hsl(220, 100%, 47%) */
-
-
-
-
 	/* --- Легкий кастом --- */
 	$out-radius: 4px; /* Радиус внешнего блока */
 	$in-radius: 4px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
@@ -50,9 +38,8 @@ html {
 	$radio-space-size-m: 50%; /* Растояние от точки до бордера у m-радио */
 	$radio-space-size-l: 50%; /* Растояние от точки до бордера у l-радио */
 
-	/* --- Полный кастом --- */
 
-	
+	/* --- Полный кастом --- */
 	/* Attach */
 	$attach-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт attach */
 	$attach-size-s-fontSize: 13px;/* Размер текста у s-attach */
