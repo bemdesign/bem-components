@@ -24,7 +24,7 @@
         background: 0 0 no-repeat url(spin_theme_islands.gif);
 
         /* `1deg` is needed to prevent FF bug after minification (`0deg` => `0`) */
-        background: linear-gradient(1deg, var(--color-default), var(--color-default));
+        background: linear-gradient(1deg, var(--color-control-default), var(--color-control-default));
 
         backface-visibility: hidden; /* Accelerate animation */
     }
@@ -49,13 +49,13 @@
 
 @keyframes spin_theme_islands {
     from {
-        border-top-color: var(--color-border-focus);
-        border-left-color: var(--color-border-focus);
+        border-top-color: var(--color-control-border-focus);
+        border-left-color: var(--color-control-border-focus);
         transform: rotate(0);
     }
     to {
-        border-top-color: var(--color-border-focus);
-        border-left-color: var(--color-border-focus);
+        border-top-color: var(--color-control-border-focus);
+        border-left-color: var(--color-control-border-focus);
         transform: rotate(360deg);
     }
 }

@@ -4,14 +4,14 @@
 
     &,
     &:link {
-        color: #008ace;
+        color: var(--color-control-link);
     }
 
     &:visited {
-        color: #b40eb4;
+        color: var(--color-control-link);
     }
 
     &:hover {
-        color: #c00;
+        color: var(--color-control-link);
     }
 }

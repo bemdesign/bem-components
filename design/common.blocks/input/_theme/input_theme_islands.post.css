@@ -6,9 +6,9 @@
 
     display: inline-block;
 
-    background: var(--color-border);
+    background: var(--color-control-border);
 
-    -webkit-tap-highlight-color: var(--color-border-hover);
+    -webkit-tap-highlight-color: var(--color-control-hover);
 
     border-radius: $input-borderRadius;
 
@@ -23,7 +23,7 @@
 
         content: '';
 
-        background: var(--color-default);
+        background: var(--color-control-default);
     }
 
     :block(input):elem(box) {
@@ -52,7 +52,7 @@
         outline: none;
         background: none;
 
-        color: var(--color-typo-primary);
+        color: var(--color-control-typo-primary);
 
         -webkit-appearance: none;
 
@@ -67,13 +67,13 @@
         }
 
         &::-webkit-input-placeholder {
-            color: var(--color-typo-placeholder);
+            color: var(--color-control-typo-placeholder);
             text-indent: 0;
         }
 
         &::-moz-placeholder {
             opacity: 1;
-            color: var(--color-typo-placeholder);
+            color: var(--color-control-typo-placeholder);
         }
 
         &::-ms-clear {
@@ -116,7 +116,7 @@
         z-index: 1;
 
         &:before {
-            box-shadow: $input-focused-boxShadow var(--color-border-focus), inset $input-focused-inset-boxShadow var(--color-border-focus); /* */
+            box-shadow: $input-focused-boxShadow var(--color-control-border-focus), inset $input-focused-inset-boxShadow var(--color-control-border-focus); /* */
         }
 
         :block(input):elem(control) {
@@ -125,7 +125,7 @@
     }
 
     &:block(input):mod(disabled) {
-        background: var(--color-border-disable);
+        background: var(--color-control-disable);
 
         &:before,
         :block(input):elem(clear) {
@@ -134,18 +134,19 @@
 
         :block(input):elem(box),
         :block(input):elem(control) {
-            color: var(--color-disable);
+            color: var(--color-control-typo-disable);
             cursor: default;
         }
     }
 
     &:block(input):mod(size s) :block(input):elem(clear),
     &:block(input):mod(size m) :block(input):elem(clear) {
-        width: $input-size-s-m-clear-width; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс s-m*/
-        height: $input-size-s-m-clear-height; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс s-m*/
+        width: $input-size-s-m-clear-width; /* */
+        height: $input-size-s-m-clear-height; /* */
 
-        background-image: url(../../theme/_islands/clear_size_s.svg);
-        background-position: 7px 50%;
+        background-image: url(../../theme/_islands/clear.svg);
+        background-position: 50% 50%;
+
     }
 
     &:block(input):mod(size s) {
@@ -175,22 +176,16 @@
         &:block(input):mod(has-clear) :block(input):elem(control) {
             padding-right: $input-size-m-has-clear-paddingRight;
         }
-
-        :block(input):elem(clear) {
-            width: $input-size-m-clear-width;
-            height: $input-size-m-clear-height;
-
-            background-position: 9px 50%;
-        }
     }
 
     &:block(input):mod(size l) :block(input):elem(clear),
     &:block(input):mod(size xl) :block(input):elem(clear) {
-        width: $input-size-l-xl-clear-width; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс l-xl*/
-        height: $input-size-l-xl-clear-height; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс l-xl*/
+        width: $input-size-l-xl-clear-width; /* */
+        height: $input-size-l-xl-clear-height; /* */
 
-        background-image: url(../../theme/_islands/clear_size_l.svg);
-        background-position: 9px 50%;
+        background-image: url(../../theme/_islands/clear.svg);
+        background-position: 50% 50%;
+
     }
 
     &:block(input):mod(size l) {
@@ -218,13 +213,6 @@
 
         &:block(input):mod(has-clear) :block(input):elem(control) {
             padding-right: $input-size-xl-has-clear-paddingRight;
-        }
-
-        :block(input):elem(clear) {
-            width: $input-size-xl-clear-width;
-            height: $input-size-xl-clear-height;
-
-            background-position: 12px 50%;
         }
     }
 

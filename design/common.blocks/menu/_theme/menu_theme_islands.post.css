@@ -6,9 +6,9 @@
     user-select: none;
 
     outline: 0;
-    background: $menu-background;
+    background: var(--color-control-default);
 
-    -webkit-tap-highlight-color: $menu-background;
+    -webkit-tap-highlight-color: var(--color-control-default);
 
     /* Using pseudo-elements intead of paddings because of Firefox bug with bottom padding (#1158):
      * https://bugzilla.mozilla.org/show_bug.cgi?id=748518 */

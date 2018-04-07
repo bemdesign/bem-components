@@ -24,7 +24,7 @@
         display: inline-block;
 
         border-radius: 3px;
-        background: var(--color-border);
+        background: var(--color-control-border);
 
         &:before {
             position: absolute;
@@ -36,7 +36,7 @@
             content: '';
 
             border-radius: $checkbox-before-borderRadius;
-            background: var(--color-default);
+            background: var(--color-control-default);
         }
 
         &:after {
@@ -109,10 +109,10 @@
 
     &:block(checkbox):mod(checked) {
         :block(checkbox):elem(box) {
-            background: var(--color-border-check);
+            background: var(--color-control-border-check);
 
             &:before {
-                background: var(--color-check);
+                background: var(--color-control-check);
             }
 
             &:after {
@@ -133,21 +133,21 @@
 
     &:block(checkbox):mod(hovered) {
         :block(checkbox):elem(box) {
-            background: var(--color-border-hover);
+            background: var(--color-control-border-hover);
         }
 
         &:block(checkbox):mod(checked) :block(checkbox):elem(box) {
-            background: var(--color-border-check-hover);
+            background: var(--color-control-border-check-hover);
         }
     }
 
     &:block(checkbox):mod(disabled) {
         cursor: default;
 
-        color: var(--color-typo-disable);
+        color: var(--color-control-typo-disable);
 
         :block(checkbox):elem(box) {
-            background: var(--color-disable);
+            background: var(--color-control-disable);
 
             &:before {
                 display: none;
@@ -155,7 +155,7 @@
         }
 
         &:block(checkbox):mod(checked) :block(checkbox):elem(box) {
-            background: var(--color-disable-check);
+            background: var(--color-control-disable-check);
 
             &:after {
                 opacity: $checkbox-disabled-checked-opacity;

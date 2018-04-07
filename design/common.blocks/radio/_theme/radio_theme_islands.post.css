@@ -1,7 +1,7 @@
 :block(radio):mod(theme islands) {
     font-family: $radio-fontFamily;
 
-    -webkit-tap-highlight-color: var(--color-border);
+    -webkit-tap-highlight-color: var(--color-control-border);
 
     &:hover {
         cursor: pointer;
@@ -22,7 +22,7 @@
         display: inline-block;
 
         border-radius: $radio-borderRadius;
-        background: var(--color-border);
+        background: var(--color-control-border);
 
         &:before {
             position: absolute;
@@ -34,7 +34,7 @@
             content: '';
 
             border-radius: $radio-before-borderRadius;
-            background: var(--color-default);
+            background: var(--color-control-default);
         }
     }
 
@@ -90,10 +90,10 @@
 
     &:block(radio):mod(checked) {
         :block(radio):elem(box) {
-            background: var(--color-border-check);
+            background: var(--color-control-border-check);
 
             &:before {
-                background: var(--color-check);
+                background: var(--color-control-check);
             }
 
             &:after {
@@ -109,30 +109,30 @@
 
     &:block(radio):mod(focused) {
         :block(radio):elem(box):before {
-            box-shadow: $radio-focused-boxShadow var(--color-border-focus), inset $radio-focused-inset-boxShadow var(--color-border-focus);
+            box-shadow: $radio-focused-boxShadow var(--color-control-border-focus), inset $radio-focused-inset-boxShadow var(--color-control-border-focus);
         }
     }
 
     &:block(radio):mod(hovered) {
         :block(radio):elem(box) {
-           background: var(--color-border-hover);
+           background: var(--color-control-border-hover);
         }
 
         &:block(radio):mod(checked) :block(radio):elem(box) {
-           background: var(--color-border-check-hover);
+           background: var(--color-control-border-check-hover);
         }
     }
 
     &:block(radio):mod(disabled) {
         cursor: default;
 
-        color: var(--color-typo-disable);
+        color: var(--color-control-typo-disable);
 
         :block(radio):elem(box) {
-            background: var(--color-disable);
+            background: var(--color-control-disable);
 
             :block(radio):mod(checked) {
-                background: var(--color-disable-check);
+                background: var(--color-control-disable-check);
             }
 
             &:before {
@@ -140,7 +140,7 @@
             }
 
             &:after {
-                background: var(--color-typo-inverse-disable);
+                background: var(--color-control-typo-inverse-disable);
             }
         }
     }

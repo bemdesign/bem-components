@@ -13,164 +13,28 @@ html {
 
 
 
+	/* Базовые цвета от которых выстраивается вся политра */
 	$color-base: #000000; /* hsl(0, 0%, 0%) */
-	$color-essential: #FFFFFF; /* hsl(0, 0%, 100%) */
-	$color-project: #0071DA; /* hsl(48, 100%, 50%) */
-	$color-phantom: #F6F5F3; /* hsl(40, 14%, 96%) */
-	$color-radical: #EE0000; /* hsl(0, 100%, 47%) */
-	$color-source: #007700; /* hsl(120, 100%, 23%) */
-	$color-path: #0070F0; /* hsl(220, 100%, 47%) */
-
-
-	/* Смысловая политра цветов, наследуемая от основных цветов (изменяется при детальной настройки цветовой схемы) */
-	/* Default */
-	$color-default:                 color($color-essential); /* Цвет фона блоков */
-	$color-inverse:                 $color-base; /* Иверсия фонового цвета блоков */
-	$color-hover:                   color($color-base a(15%)); /* Цвет фона блоков по ховеру */
-	$color-press:                   $color-phantom; /* Цвет фона блоков по нажатию */
-
-	$color-border:                  color($color-base a(20%)); /* Цвет бордеров */
-	$color-border-hover:            color($color-base a(25%)); /* Цвет бордеров по ховеру */
-	$color-border-press:            color($color-base a(35%)); /* Цвет бордеров по нажатию */
-	/* $color-border-focus:         color($color-base a(35%));  Цвет бордеров по фокусу */
-
-	$color-typo-primary:            $color-base; /* Цвет основного текста */
-	/* $color-typo-inverse:         $color-essential;  Цвет инверсии основного текста */
-	$color-typo-placeholder:        color($color-base l(+60%)); /* Цвет основного плейсхолдера */
-
-
-
-	/* Action / Focus */
-	$color-action:                  color($color-project l(+15%)); /* Фон активных блоков */
-	$color-action-hover:            color($color-project l(+20%)); /* Фон активных блоков по ховеру */
-	$color-action-focus:            $color-project; /* Фон активных блоков при фокусе */
-	$color-action-press:            $color-project; /* Фон активных блоков по нажатию */
-
-	$color-check:                   color($color-project l(+33%)); /* Фон чекнутых блоков */
-	$color-check-press:             color($color-project l(+25%)); /* Фон чекнутых блоков по нажатию */
-
-	$color-border-check:            red; /* Цвет цвет бордера чекнутого блока */
-	$color-border-check-press:      color($color-base a(35%)); /* Цвет цвет бордера чекнутого блока при фокусе по нажатию */
-	$color-border-check-hover:      color($color-project a(60%) l(-25%)); /* Цвет цвет бордера чекнутого блока по ховеру */
-	$color-border-focus:            $color-action; /* Цвет цвет бордера при фокусе */
-
-
-
-	/* Disable */
-	$color-disable:                 color($color-base a(8%)); /* Фон неактивного блока */
-	$color-disable-check:           color($color-base a(8%)); /* Фон чекнутого неактивного блока */
-
-	$color-border-disable:          color($color-base l(+60%)); /* Фон бордеров неактивного блока */
-
-	$color-typo-disable:            color($color-base l(+60%)); /* Цвет основного текста неактивного блока */
-	$color-typo-inverse-disable:    color($color-base a(40%)); /* Цвет инверсии основного текста неактивного блока */
-
-
-
-	/* Links */
-	$color-link:                    $color-path; /* Цвет ссылок */
-	$color-link-hover:              $color-radical; /* Цвет ссылок по ховеру */
-	$color-link-external:           $color-source; /* Цвет внешних ссылок */
-	$color-link-ghost:              $color-phantom; /* Цвет второстепенных ссылок */
-	$color-link-ghost-hover:        color($color-phantom l(-10)); /* Цвет второстепенных ссылок по ховеру */
-	$color-link-visited:            color($color-path s(10%)); /* Цвет посещенных ссылок */
-
-
-
-
-
-
-
-:root {
-	--color-base: $color-base; /* hsl(0, 0%, 0%) */
-	--color-essential: $color-essential; /* hsl(0, 0%, 100%) */
-	--color-project: $color-project; /* hsl(48, 100%, 50%) */
-	--color-phantom: $color-phantom; /* hsl(40, 14%, 96%) */
-	--color-radical: $color-radical; /* hsl(0, 100%, 47%) */
-	--color-source: $color-source; /* hsl(120, 100%, 23%) */
-	--color-path: $color-path; /* hsl(220, 100%, 47%) */
-
-
-	/* Смысловая политра цветов, наследуемая от основных цветов (изменяется при детальной настройки цветовой схемы) */
-	/* Default */
-	--color-default: $color-default; /* Цвет фона блоков */
-	--color-inverse: $color-inverse; /* Иверсия фонового цвета блоков */
-	--color-hover: $color-hover; /* Цвет фона блоков по ховеру */
-	--color-press: $color-press; /* Цвет фона блоков по нажатию */
-
-	--color-border: $color-border; /* Цвет бордеров */
-	--color-border-hover: $color-border-hover; /* Цвет бордеров по ховеру */
-	--color-border-press: $color-border-press; /* Цвет бордеров по нажатию */
-	/* --color-border-focus: $color-border-focus; Цвет бордеров по фокусу */
-
-	--color-typo-primary: $color-typo-primary; /* Цвет основного текста */
-	/* --color-typo-inverse: $color-typo-inverse; Цвет инверсии основного текста */
-	--color-typo-placeholder: $color-typo-placeholder; /* Цвет основного плейсхолдера */
-
-
-
-	/* Action / Focus */
-	--color-action: $color-action; /* Фон активных блоков */
-	--color-action-hover: $color-action-hover; /* Фон активных блоков по ховеру */
-	--color-action-focus: $color-action-focus; /* Фон активных блоков при фокусе */
-	--color-action-press: $color-action-press; /* Фон активных блоков по нажатию */
-
-	--color-check: $color-check; /* Фон чекнутых блоков */
-	--color-check-press: $color-check-press; /* Фон чекнутых блоков по нажатию */
-
-	--color-border-check: $color-border-check; /* Цвет цвет бордера чекнутого блока */
-	--color-border-check-press: $color-border-check-press; /* Цвет цвет бордера чекнутого блока при фокусе по нажатию */
-	--color-border-check-hover: $color-border-check-hover; /* Цвет цвет бордера чекнутого блока по ховеру */
-	--color-border-focus: $color-border-focus; /* Цвет цвет бордера при фокусе */
-
-
-
-	/* Disable */
-	--color-disable: $color-disable; /* Фон неактивного блока */
-	--color-disable-check: $color-disable-check; /* Фон чекнутого неактивного блока */
-
-	--color-border-disable: $color-border-disable; /* Фон бордеров неактивного блока */
-
-	--color-typo-disable: $color-typo-disable; /* Цвет основного текста неактивного блока */
-	--color-typo-inverse-disable: $color-typo-inverse-disable; /* Цвет инверсии основного текста неактивного блока */
-
-
-
-	/* Links */
-	--color-link: $color-link; /* Цвет ссылок */
-	--color-link-hover: $color-link-hover; /* Цвет ссылок по ховеру */
-	--color-link-external: $color-link-external; /* Цвет внешних ссылок */
-	--color-link-ghost: $color-link-ghost; /* Цвет второстепенных ссылок */
-	--color-link-ghost-hover: $color-link-ghost-hover;  /* Цвет второстепенных ссылок по ховеру */
-	--color-link-visited: $color-link-visited; /* Цвет посещенных ссылок */
-}
-
-
-
-
-
-	font: 13px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-	min-height: 100%;
-	margin: 0;
-
-	color: $color-typo-primary;
-	background: $color-default;
+	$color-essential: #fff; /* hsl(0, 0%, 100%) */
+	$color-project: #0056b3; /* hsl(211, 100%, 35%) */
+	$color-phantom: #000; /* hsl(40, 14%, 96%) */
+	$color-radical: #e00; /* hsl(0, 100%, 47%) */
+	$color-path: #0070f0; /* hsl(220, 100%, 47%) */
 
 
 
 
 	/* --- Легкий кастом --- */
-	$out-radius: 2px; /* Радиус внешнего блока */
-	$in-radius: 2px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
+	$out-radius: 4px; /* Радиус внешнего блока */
+	$in-radius: 4px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
 
-	$border-space: 1px; /* Размер бордера */
+	$border-space: 2px; /* Размер бордера */
 
 	$checkbox-out-radius: 3px; /* Радиус внешнего блока чекбокса*/
 	$checkbox-in-radius: 2px; /* Радиус внутреннего блока чекбокса*/
 
-	$radio-border-space: 1px; /* Размер бордера радио */
-	$checkbox-border-space: 1px; /* Размер бордера чекбокса*/
+	$radio-border-space: 0px; /* Размер бордера радио */
+	$checkbox-border-space: 0px; /* Размер бордера чекбокса*/
 
 	$select-tick: url('../../theme/_islands/arrow.svg'); /*  */
 	$select-tick-hovered: url('../../theme/_islands/arrow-hover.svg'); /*  */
@@ -181,12 +45,14 @@ html {
 	$checkbox-m-tip: url('../../theme/_islands/checkbox_m_tip.svg'); /*  */
 	$checkbox-l-tip: url('../../theme/_islands/checkbox_l_tip.svg'); /*  */
 
-	$radio-dot-background: $color-default; /* Фон точки */
+	$radio-dot-background: var(--color-control-default); /* Фон точки */
 
 	$radio-space-size-m: 50%; /* Растояние от точки до бордера у m-радио */
 	$radio-space-size-l: 50%; /* Растояние от точки до бордера у l-радио */
 
 	/* --- Полный кастом --- */
+
+	
 	/* Attach */
 	$attach-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт attach */
 	$attach-size-s-fontSize: 13px;/* Размер текста у s-attach */
@@ -228,18 +94,18 @@ html {
 	$control-group-last-child-before-border: $border-space; /* Отступ правой внутренний части у control-group на размер бордера  */
 
 	$button-size-s-font: 13px; /* Размер текста текста у s-button */
-	$button-size-s-lineHeight: 24px; /* Межстрочечный интервал у s-button */
+	$button-size-s-lineHeight: 32px; /* Межстрочечный интервал у s-button */
 
 	$button-size-m-font: 15px; /* Размер текста у m-button */
-	$button-size-m-lineHeight: 28px; /* Межстрочечный интервал текста у m-button */
+	$button-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-button */
 
 	$button-size-l-font: 18px; /* Размер текста у l-button */
-	$button-size-l-lineHeight: 32px; /* Межстрочечный интервал текста у l-button */
+	$button-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у l-button */
 
 	$button-size-xl-font: 20px; /* Размер текста у xl-button */
-	$button-size-xl-lineHeight: 38px; /* Межстрочечный интервал текста у xl-button */
+	$button-size-xl-lineHeight: 48px; /* Межстрочечный интервал текста у xl-button */
 
-	$button-before-space: $border-space; /* Отступ внутренний части у button на размер бордера */
+	$button-before-space: 0px; /* Отступ внутренний части у button на размер бордера */
 
 	$button-size-s-icon-width: 24px; /* Ширина иконки у s-button */
 	$button-size-m-icon-width: 32px; /* Ширина иконки у m-button */
@@ -279,7 +145,7 @@ html {
 	$checkbox-size-m-fontSize: 15px; /* Размер текста у m-checkbox */
 	$checkbox-size-m-width: 16px; /* Ширина у m-checkbox */
 	$checkbox-size-m-height: 16px; /* Высота у m-checkbox */
-	$checkbox-size-m-lineHeight: 28px; /* Межстрочечный интервал текста у m-checkbox */
+	$checkbox-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-checkbox */
 	$checkbox-size-m-marginRight: 5px; /* Внежний правый отступ у m-checkbox (от текса) */
 	$checkbox-size-m-top: 2px; /* Верхний отступ у m-checkbox */
 	$checkbox-size-m-transformY: -5px; /* Трансформация галочки при появлении/скрытии у m-checkbox */
@@ -290,7 +156,7 @@ html {
 	$checkbox-size-l-fontSize: 18px; /* Размер текста у l-checkbox */
 	$checkbox-size-l-width: 20px; /* Ширина у l-checkbox */
 	$checkbox-size-l-height: 20px; /* Высота у l-checkbox */
-	$checkbox-size-l-lineHeight: 32px;  /* Межстрочечный интервал текста у l-checkbox */
+	$checkbox-size-l-lineHeight: 42px;  /* Межстрочечный интервал текста у l-checkbox */
 	$checkbox-size-l-marginRight: 8px; /* Внешний правый отступ у l-checkbox (от текса) */
 	$checkbox-size-l-top: 3px;/* Верхний отступ у l-checkbox */
 	$checkbox-size-l-transformY: -5px; /* Трансформация галочки при появлении/скрытии у l-checkbox */
@@ -313,57 +179,43 @@ html {
 	$input-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт инпута */
 
 	$input-before-space: $border-space; /* Отступ верхний у внутренний части input на размер бордера */
-	$input-focused-boxShadow: 0 0 0 1px; /* Тень у фокуснутого input */
-	$input-focused-inset-boxShadow: 0 0 0 $border-space; /* Внутренняя тень у фокуснутого input */
+	$input-focused-boxShadow: 0 0 0 $border-space; /* Тень у фокуснутого input */
+	$input-focused-inset-boxShadow: 0 0 0 0; /* Внутренняя тень у фокуснутого input */
 
-	$input-borderRadius: 0; /* Внутренний бордер-радиус у input */
-	$input-before-borderRadius: 0; /* Внешний бордер-радиус у input */
-
-	$input-size-s-clear-width: 23px; /* Ширина отчищающего блока (с крестиком) у s/m-input */
-	$input-size-s-clear-height: 23px; /* Высота отчищающего блока (с крестиком) у s/m-input */
-
-	$input-size-m-clear-width: 31px; /* Ширина отчищающего блока (с крестиком) у s/m-input */
-	$input-size-m-clear-height: 31px; /* Высота отчищающего блока (с крестиком) у s/m-input */
+	$input-borderRadius: 4px; /* Внутренний бордер-радиус у input */
+	$input-before-borderRadius: 3px; /* Внешний бордер-радиус у input */
 
 
-	$input-size-s-m-clear-width: 23px; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс s-m*/
-	$input-size-s-m-clear-height: 23px; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс s-m*/
+	$input-size-s-m-clear-width: 32px; /* Ширина отчищающего блока (с крестиком) у класс s-m*/
+	$input-size-s-m-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у s-m*/
 
-
-	$input-size-l-clear-width: 32px; /* Ширина отчищающего блока (с крестиком) у l-input */
-	$input-size-l-clear-height: 32px; /* Высота отчищающего блока (с крестиком) у l-input */
-
-	$input-size-xl-clear-width: 38px; /* Ширина отчищающего блока (с крестиком) у xl-input */
-	$input-size-xl-clear-height: 38px; /* Высота отчищающего блока (с крестиком) у xl-input */
-
-
-	$input-size-l-xl-clear-width: 32px; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс l-xl*/
-	$input-size-l-xl-clear-height: 32px; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Новый класс l-xl*/
+	$input-size-l-xl-clear-width: 40px; /* Ширина отчищающего блока (с крестиком) у l-xl*/
+	$input-size-l-xl-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у l-xl*/
 
 
 	$input-size-s-fontSize: 13px; /* Тень у фокуснутого s-input */
-	$input-size-s-lineHeight: 24px; /* Межстрочечный интервал у s-input */
-	$input-size-s-control-height: 24px; /* Высота самого s-input */
+	$input-size-s-lineHeight: 32px; /* Межстрочечный интервал у s-input */
+	$input-size-s-control-height: 32px; /* Высота самого s-input */
 	$input-size-s-control-padding: 0 6px; /* Отступы самого s-input */
 	$input-size-s-has-clear-paddingRight: 23px; /* Оступп правый под размер иконки очистить (крестик) у s-input */
 
 	$input-size-m-fontSize: 15px; /* Тень у фокуснутого m-input */
-	$input-size-m-lineHeight: 28px; /* Межстрочечный интервал у m-input */
-	$input-size-m-control-height: 28px; /* Высота самого m-input */
+	$input-size-m-lineHeight: 36px; /* Межстрочечный интервал у m-input */
+	$input-size-m-control-height: 36px; /* Высота самого m-input */
 	$input-size-m-control-padding: 0 10px; /* Отступы самого m-input */
 	$input-size-m-has-clear-paddingRight: 31px; /* Оступп правый под размер иконки очистить (крестик) у m-input */
 	$input-size-m-clear-width: 28px; /* Ширина отчищающего блока (с крестиком) у m-input */
 	$input-size-m-clear-height: 28px; /* Высота отчищающего блока (с крестиком) у m-input */
 
 	$input-size-l-fontSize: 18px; /* Тень у l-input при фокусе */
-	$input-size-l-lineHeight: 32px; /* Межстрочечный интервал текста у l-input */
-	$input-size-l-control-height: 32px; /* Высота самого l-input */
+	$input-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у l-input */
+	$input-size-l-control-height: 42px; /* Высота самого l-input */
 	$input-size-l-control-padding:  0 12px; /* Внутренние отступы самого l-input */
 	$input-size-l-has-clear-paddingRight: 32px; /* Внутренний правый остут под размер иконки очистить (крестик) у l-input */
 
 	$input-size-xl-fontSize: 20px; /* Размер текста у xl-input при фокусе */
-	$input-size-xl-lineHeight: 38px; /* Межстрочечный интервал текста у xl-input */
-	$input-size-xl-control-height: 38px; /* Высота у самого xl-input */
+	$input-size-xl-lineHeight: 48px; /* Межстрочечный интервал текста у xl-input */
+	$input-size-xl-control-height: 48px; /* Высота у самого xl-input */
 	$input-size-xl-control-padding: 0 13px; /* Внутренние отступы у самого xl-input */
 	$input-size-xl-has-clear-paddingRight: 38px; /* Правый внутренний оступ под размер иконки очистить (крестик) у xl-input */
 	$input-size-xl-clear-width: 38px; /* Ширина отчищающего блока (с крестиком) у xl-input */
@@ -425,7 +277,7 @@ html {
 	$radio-height-m-after: 4px;
 
 	$radio-size-l-fontSize: 18px; /* Размер текста у l-radio */
-	$radio-size-l-lineHeight: 32px; /* Межстрочечный интервал текста у l-radio */
+	$radio-size-l-lineHeight: 36px; /* Межстрочечный интервал текста у l-radio */
 	$radio-size-l-top: 3px; /* Верхний отступ у l-radio */
 	$radio-size-l-width: 20px; /* Ширина у l-radio */
 	$radio-size-l-height: 20px; /* Высота у l-radio */
@@ -474,25 +326,24 @@ html {
 	/* Menu*/
 	$menu-group-borderWidth: 1px; /* Бордер у menu-group меню */
 
-	$menu-background: alpha(lightness($color-base, 100%), 100%); /* */
 
 	$menu-size-s-fontSize: 13px; /* */
-	$menu-size-s-lineHeight: 24px; /* */
+	$menu-size-s-lineHeight: 36px; /* */
 	$menu-size-s-vertSpace: 3px; /* */
 	$menu-size-s-horSpace: 9px; /* */
 
 	$menu-size-m-fontSize: 15px; /* */
-	$menu-size-m-lineHeight: 28px; /* */
+	$menu-size-m-lineHeight: 40px; /* */
 	$menu-size-m-vertSpace: 4px; /* */
 	$menu-size-m-horSpace: 15px; /* */
 
 	$menu-size-l-fontSize: 18px; /* */
-	$menu-size-l-lineHeight: 32px; /* */
+	$menu-size-l-lineHeight: 48px; /* */
 	$menu-size-l-vertSpace: 7px; /* */
 	$menu-size-l-horSpace: 18px; /* */
 
 	$menu-size-xl-fontSize: 20px; /* */
-	$menu-size-xl-lineHeight: 38px; /* */
+	$menu-size-xl-lineHeight: 48px; /* */
 	$menu-size-xl-vertSpace: 5px; /* */
 	$menu-size-xl-horSpace: 26px; /* */
 
@@ -504,10 +355,10 @@ html {
 	$textarea-minHeight: 2em; /* Минимальная высота у textarea */
 
 	$textarea-focused-boxShadow: 0 0 0 1px; /* Тень у textarea при фокусе */
-	$textarea-borderWidth: 1px; /* Ширина бордера у textarea */
+	$textarea-borderWidth: 2px; /* Ширина бордера у textarea */
 
 	$textarea-size-s-fontSize: 13px; /* Размер текста s-textarea */
-	$textarea-size-s-7pxneHeight: 24px; /* Межстрочечный интервал текста у s-textarea */
+	$textarea-size-s-lineHeight: 24px; /* Межстрочечный интервал текста у s-textarea */
 	$textarea-size-s-paddingLeft: 6px; /* Внутренний левый отступ у s-textarea */
 
 	$textarea-size-m-fontSize: 15px; /* Размер текста у m textarea */
@@ -541,7 +392,6 @@ html {
 	$size-list-m: 28px;
 	$size-list-l: 32px;
 	$size-list-xl: 38px;
-
 	/* Spiner */
 
 

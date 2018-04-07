@@ -12,13 +12,19 @@
     }
 
     &:block(menu):elem(item):mod(checked) {
-        background: 0 50% no-repeat url(../../theme/_islands/tip.svg);
+        background: var(--color-control-check);
+        color: #fff;
+
+        &:block(menu):elem(item):mod(hovered) {
+            background: var(--color-control-check);
+            color: #fff;
+        }
     }
 
     &:block(menu):elem(item):mod(hovered) {
         cursor: pointer;
 
-        background-color: $color-hover;
+        background-color: var(--color-control-hover);
         color: $color-typo-primary;
     }
 
