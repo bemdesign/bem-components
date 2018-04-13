@@ -1,6 +1,6 @@
 :block(link):mod(theme islands) {
 
-	font-family: $link-fontFamily;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--color-link);
     cursor: pointer;
     transition: $link-transition;

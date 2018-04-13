@@ -1,5 +1,5 @@
 :block(select):mod(theme islands) {
-    /* font-family: $select-fontFamily; */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     max-width: 100%;
 
@@ -67,13 +67,13 @@
         top: 0;
         right: 0;
 
-        background-image: $select-tick;
+        background-image: $select-tick-background;
 
         transition: transform 0.1s ease-out;
     }
 
     &:block(select):mod(size s) :block(select):elem(tick) {
-        background-image: $select-s-tick;
+        background-image: $select-tick-size-s-background;
     }
 
     &:block(select):mod(opened) :block(select):elem(tick) {

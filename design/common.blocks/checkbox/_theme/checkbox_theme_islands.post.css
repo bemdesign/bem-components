@@ -1,10 +1,9 @@
 :block(checkbox):mod(theme islands) {
     position: relative; /* fix #1538 */
 
-    /* font-family: $checkbox-fontFamily; */
-	color: var(--color-control-typo-primary);
-	
-    -webkit-tap-highlight-color: var(--color-control-typo-primary);
+    font-family: $checkbox-fontFamily;
+
+    -webkit-tap-highlight-color: var(--color-typo-primary);
 
     &:hover {
         cursor: pointer;

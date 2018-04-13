@@ -1,5 +1,5 @@
 :block(button):mod(theme islands) {
-    /* font-family: $button-fontFamily; */
+    font-family: $button-fontFamily;
 
     position: relative;
 
@@ -10,11 +10,11 @@
 
     user-select: none;
 
-    color: var(--color-control-typo-primary);
+    color: var(--color-control-typo-primary); /* !!! */
     border: 0;
     border-radius: $button-borderRadius;
     outline: 0;
-    background: var(--color-control-default);
+    background: var(--color-control-default); /* !!! */
 
     text-align: center;
     white-space: nowrap;
@@ -64,16 +64,16 @@
     &:block(button):mod(hovered) {
         cursor: pointer;
 
-        background: var(--color-control-hover);
+        background: var(--color-hover);
     }
 
     &:block(button):mod(focused-hard) {
         z-index: 1;
 
-        background: var(--color-control-border-focus);
+        background: var(--color-border-focus);
 
         &:block(button):before {
-            box-shadow: $button-focused-boxShadow var(--color-control-border-focus), inset $button-focused-boxShadow-inset var(--color-control-border-focus);
+            box-shadow: $button-focused-boxShadow var(--color-border-focus), inset $button-focused-boxShadow-inset var(--color-border-focus);
         }
     }
 
@@ -82,7 +82,7 @@
     }
 
     &:block(button):mod(checked) {
-        color: var(--color-control-typo-internal);
+        color: #fff;
 
         &:before {
             background: var(--color-control-check);
@@ -123,7 +123,7 @@
 
     &:block(button):mod(view action) {
         background: var(--color-control-action);
-        color: var(--color-control-typo-internal);
+        color: #fff; /* !!! */
 
         &:before {
             display: none;
@@ -159,7 +159,7 @@
         }
 
         &:block(button):mod(pressed):before {
-            background: var(--color-control-press);
+            background: var(--color-control-border-press);
         }
 
         &:block(button):mod(checked) {
@@ -298,11 +298,17 @@
 
         }
 
+
+
         &:block(button):mod(hovered) {
             cursor: pointer;
 
             background: var(--color-control-default);
         }
+
+
+
+
 
         &:block(button):mod(checked):before {
             right: 1px;

@@ -17,7 +17,7 @@
         margin: $modal-margin;
 
         border: $modal-borderWidth solid var(--color-control-border);
-        background-color: var(--color-control-default);
+        background-color: #fff;
     }
 
     &:block(modal):mod(js inited) {

@@ -13,11 +13,11 @@
 
     &:block(menu):elem(item):mod(checked) {
         background: var(--color-control-check);
-        color: var(--color-control-typo-internal);
+        color: #fff;
 
         &:block(menu):elem(item):mod(hovered) {
             background: var(--color-control-check);
-            color: var(--color-control-typo-internal);
+            color: #fff;
         }
     }
 
@@ -25,7 +25,7 @@
         cursor: pointer;
 
         background-color: var(--color-control-hover);
-        color: var(--color-control-typo-primary);
+        color: $color-typo-primary;
     }
 
     &:block(menu):elem(item):mod(type link) {
