@@ -2,11 +2,11 @@
     display: inline-block;
 
     &:block(checkbox-group):mod(size m) {
-        line-height: 24px;
+        line-height: $checkbox-group-m-lineHeight;
     }
 
     &:block(checkbox-group):mod(size l) {
-        line-height: 30px;
+        line-height: $checkbox-group-l-lineHeight;
     }
 
     &:block(checkbox-group):mod(type button) {

@@ -1,5 +1,5 @@
 :block(menu):mod(theme islands) {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* font-family: $menu-fontFamily; */
 
     box-sizing: border-box;
 
@@ -49,11 +49,11 @@
     }
 
     :block(menu):elem(group) {
-        border: $menu-group-borderWidth solid  var(--color-border);
+        border: $menu-group-borderWidth solid  var(--color-control-border);
         border-width: 1px 0;
 
         &-title {
-            color: var(--color-typo-primary);
+            color: var(--color-control-typo-primary);
 
         }
 

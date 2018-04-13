@@ -7,9 +7,9 @@
     animation-duration: 0.1s;
     animation-timing-function: ease-out;
 
-    background: var(--color-default);
-    box-shadow: $popup-boxShadow color($color-base a(10%)),
-                $popup-long-boxShadow color($color-base a(40%));
+    background: var(--color-control-default); /* */
+    box-shadow: $popup-boxShadow color($color-base a(10%)), /* */
+                $popup-long-boxShadow color($color-base a(40%)); /* */
 
     animation-fill-mode: forwards;
 

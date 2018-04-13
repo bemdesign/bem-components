@@ -1,5 +1,5 @@
 :block(input):mod(theme islands) {
-    font-family: $input-fontFamily;
+    /* font-family: $input-fontFamily; */
 
     position: relative;
 

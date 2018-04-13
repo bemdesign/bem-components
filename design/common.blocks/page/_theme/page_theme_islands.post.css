@@ -3,18 +3,18 @@ html {
 }
 
 :block(page):mod(theme islands) {
-	font: 13px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-	min-height: 100%;
-	margin: 0;
-
-	color: #000;
-	background: #fff;
+	/* Page */
+	$page-fontsize: 13px; /* Размер текста страницы */
+	$page-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт страниы */
+	$page-color: #000; /* Цвет текста страницы  */
+	$page-background: #ff0000; /* Цвет фона страницы */
+	/* /Page */
 
 
 	/* --- Легкий кастом --- */
 	$out-radius: 4px; /* Радиус внешнего блока */
-	$in-radius: 4px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
+	$in-radius: 3px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
 
 	$border-space: 2px; /* Размер бордера */
 
@@ -37,6 +37,9 @@ html {
 
 	$radio-space-size-m: 50%; /* Растояние от точки до бордера у m-радио */
 	$radio-space-size-l: 50%; /* Растояние от точки до бордера у l-радио */
+
+	$attach-size-s-clear-width: url('../../theme/_islands/clear_size_s.svg'); /*  */
+	$attach-size-l-clear-width: url('../../theme/_islands/clear_size_l'); /*  */
 
 
 	/* --- Полный кастом --- */
@@ -126,9 +129,6 @@ html {
 
 	$checkbox-after-space: 0px; /* Отступ иконки (галочки) у checkbox */
 
-
-
-
 	$checkbox-size-m-fontSize: 15px; /* Размер текста у m-checkbox */
 	$checkbox-size-m-width: 16px; /* Ширина у m-checkbox */
 	$checkbox-size-m-height: 16px; /* Высота у m-checkbox */
@@ -169,16 +169,14 @@ html {
 	$input-focused-boxShadow: 0 0 0 $border-space; /* Тень у фокуснутого input */
 	$input-focused-inset-boxShadow: 0 0 0 0; /* Внутренняя тень у фокуснутого input */
 
-	$input-borderRadius: 4px; /* Внутренний бордер-радиус у input */
-	$input-before-borderRadius: 3px; /* Внешний бордер-радиус у input */
-
+	$input-borderRadius: 0px; /* Внутренний бордер-радиус у input */
+	$input-before-borderRadius: 0px; /* Внешний бордер-радиус у input */
 
 	$input-size-s-m-clear-width: 32px; /* Ширина отчищающего блока (с крестиком) у класс s-m*/
 	$input-size-s-m-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у s-m*/
 
 	$input-size-l-xl-clear-width: 40px; /* Ширина отчищающего блока (с крестиком) у l-xl*/
 	$input-size-l-xl-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у l-xl*/
-
 
 	$input-size-s-fontSize: 13px; /* Тень у фокуснутого s-input */
 	$input-size-s-lineHeight: 32px; /* Межстрочечный интервал у s-input */
@@ -213,7 +211,10 @@ html {
 	$control-group-last-child-right: 1px; /* Правый оступ у последнего контрола в control-group */
 	/* /Input */
 
+
 	/* Link */
+	$link-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт ссылки */
+
 	$link-textDecoration: underline; /* Подчеркивание у link */
 	$link-transition: color 0.15s ease-out; /* Анимация у link */
 
@@ -223,17 +224,13 @@ html {
 	$link-size-xl: 20px; /* Размер текста у xl-link */
 	/* /Link */
 
+
 	/* Modal */
 	$modal-margin: 5px; /* Отступы у модалки */
 	$modal-borderWidth: 1px; /* Бордеры у модалки */
 	/* /Modal */
 
-	/* Page */
-	/* $page-fontsize: 13px/15px;  Размер текста страницы */
-	/* $page-fontFamily: Arial, Helvetica, sans-serif;  Шрифт страниы */
-	/* $page-color: $base;  Цвет текста страницы */
-	/* $page-background: alpha(lightness($base, 100%), 100%);  Цвет фона страницы */
-	/* /Page */
+
 
 	/* Popup */
 	$popup-boxShadow: 0 0 0 1px; /* Короткая тень у popup */
@@ -244,6 +241,7 @@ html {
 	/* Progressbar */
 	$progressbar-height: 2px; /* Высота у progressbar */
 	/* /Progressheight */
+
 
 	/* Radio */
 	$radio-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт у radio */
@@ -285,12 +283,16 @@ html {
 	$radio-line-last-child-marginRight: 0; /* Внешний правый отступ у последнего радио с текстом  */
 	/* /Radio */
 
+
 	/* Radio-group */
 	$radio-group-size-m-lineHeight: 24px; /* Межстрочечный интервал текста у m-radio в списки (расстояние между radio) */
 	$radio-group-size-l-lineHeight: 28px; /* Межстрочечный интервал текста у  l-radio в списке  (расстояние между radio) */
 	/* /Radio-group */
 
+
 	/* Select */
+	$select-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт ссылки */
+
 	$select-button-size-s-paddingRight: 27px; /* Внутренний правый отступ у s-slect-button (на ширину иконки стрелки) */
 	$select-button-size-s-icon-width: 27px; /* Ширина иконки (стрелки) s-slect-button */
 
@@ -302,17 +304,13 @@ html {
 
 	$select-button-size-xl-paddingRight: 42px; /* Внутренний правый отступ у xl-slect-button (на ширину иконки стрелки) */
 	$select-button-size-xl-icon-width: 36px; /* Ширина иконки (стрелки) у xl-slect-button */
-
-	$select-tick-background: $select-tick;
-	$select-tick-background-hovered: $select-tick-hovered;
-
-	$select-tick-size-s-background: $select-s-tick;
-	$select-tick-size-s-background-hovered: $select-s-tick-hovered;
 	/* /Select */
 
-	/* Menu*/
-	$menu-group-borderWidth: 1px; /* Бордер у menu-group меню */
 
+	/* Menu*/
+	$menu-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт меню */
+
+	$menu-group-borderWidth: 1px; /* Бордер у menu-group меню */
 
 	$menu-size-s-fontSize: 13px; /* */
 	$menu-size-s-lineHeight: 36px; /* */
@@ -337,9 +335,12 @@ html {
 	$menu-item-link-after-space: 0px; /* Отступ кликабельной области у menu-item-link в списке */ /*Не нашёл куда воткнуть!!!!!!!!!!!!!!!!!*/
 	/* /Menu */
 
+
 	/* Textarea */
 	$textarea-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт у textarea */
 	$textarea-minHeight: 2em; /* Минимальная высота у textarea */
+
+	$textarea-borderRadius: 0px; /* Скуругление краев у textarea */
 
 	$textarea-focused-boxShadow: 0 0 0 1px; /* Тень у textarea при фокусе */
 	$textarea-borderWidth: 2px; /* Ширина бордера у textarea */
@@ -359,17 +360,20 @@ html {
 	$textarea-size-xl-fontSize: 20px; /* Размер текста у xl-textarea */
 	$textarea-size-xl-lineHeight: 38px; /* Межстрочечный интервал текста у xl-textarea */
 	$textarea-size-xl-paddingLeft: 12px; /* Внутренний левый отступ у xl-textarea */
-	/* Textarea */
+	/* /Textarea */
+
 
 	/* Checkbox group*/
 	$checkbox-size-m-button-fontSize: 15px; /* Размер текста у m-checkbox-button */
 	$checkbox-size-l-button-fontSize: 18px;  /* Размер текста у l-checkbox-button */
 	/* Checkbox group*/
 
+
 	/* Radio group */
 	$radio-group-size-m-button-fontSize: 15px; /* Размер текста у m-radio-button */
 	$radio-group-size-l-button-fontSize: 18px; /* Размер текста у l-radio-button */
 	/* Radio group */
+
 
 	/* Spiner */
 	$spin-borderWidth: 2px; /* Ширина бордера у спиннера */
@@ -382,9 +386,24 @@ html {
 	/* Spiner */
 
 
-
 	/* Radio-group */
 	$checkbox-group-size-m-lineHeight: 28px; /* Межстрочечный интервал текста у m-radio в списки (расстояние между radio) */
 	$checkbox-group-size-l-lineHeight: 32px; /* Межстрочечный интервал текста у  l-radio в списке  (расстояние между radio) */
+	
+	$checkbox-group-m-lineHeight: 28px; /* Межстрочечный интервал у чебокса */
+	$checkbox-group-l-lineHeight: 32px; /* Межстрочечный интервал у чебокса */
+	
 	/* /Radio-group */
+
+	/* Page */
+	font-size: $page-fontsize;
+	font-family: $page-fontFamily;
+
+	/* color: $page-color;  */
+	/* background: $page-background; */
+
+	min-height: 100%;
+
+	margin: 0;
+	/* Page */
 }

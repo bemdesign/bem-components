@@ -63,7 +63,7 @@
         width: $attach-size-s-clear-width;
         height: $attach-size-s-clear-height;
 
-        background-image: url(../../theme/_islands/clear_size_s.svg);
+        background-image: $attach-size-s-clear-width;
     }
 
     &:block(attach):mod(size l) :block(attach):elem(clear),
@@ -71,7 +71,7 @@
         width: $attach-size-l-clear-width;
         height: $attach-size-l-clear-height;
 
-        background-image: url(../../theme/_islands/clear_size_l.svg);
+        background-image: $attach-size-l-clear-width;
     }
 
     :block(button) {

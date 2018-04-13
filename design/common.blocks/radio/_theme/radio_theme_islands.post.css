@@ -1,7 +1,9 @@
 :block(radio):mod(theme islands) {
-    font-family: $radio-fontFamily;
+    /* font-family: $radio-fontFamily; */
 
-    -webkit-tap-highlight-color: var(--color-control-border);
+	-webkit-tap-highlight-color: var(--color-control-border);
+	
+	color: var(--color-control-typo-primary);
 
     &:hover {
         cursor: pointer;
