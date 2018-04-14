@@ -1,7 +1,6 @@
 :block(component):mod(liquid default) {
 
 	/* Смысловая политра цветов, наследуемая от основных цветов (изменяется при детальной настройки цветовой схемы) */
-	/* Default */
 	$color-control-default:                 color($color-base l(94%)); /* Цвет фона контрола */
 	$color-control-hover:                   color($color-phantom a(15%)); /* Цвет фона контрола по ховеру */
 	$color-control-press:                   color($color-phantom a(20%)); /* Цвет фона контрола по нажатию */
@@ -38,8 +37,6 @@
 	$color-control-border-disable:          color($color-phantom l(+60%)); /* Цвет бордеров неактивного контрола */
 
 	$color-control-typo-disable:            color($color-phantom l(+60%)); /* Цвет основного текста неактивного контрола */
-	$color-control-typo-inverse-disable:    color($color-phantom l(40%)); /* Цвет инверсии основного текста неактивного контрола */
-
 
 	/* Links */
 	$color-control-link:                    $color-path; /* Цвет ссылки */
@@ -48,8 +45,6 @@
 	$color-control-link-ghost:              $color-phantom; /* Цвет второстепенной ссылоки */
 	$color-control-link-ghost-hover:        color($color-phantom l(-10)); /* Цвет второстепенной ссылоки по ховеру */
 	$color-control-link-visited:            color($color-path s(10%)); /* Цвет посещенной ссылоки */
-
-
 
 
 
@@ -101,9 +96,10 @@
 	--color-control-link-visited: $color-control-link-visited; /* Цвет посещеннрй ссылоки */
 
 
+
 	/* --- Легкий кастом --- */
-	--out-radius: 4px; /* Радиус внешнего блока */
-	--in-radius: 4px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
+	--out-radius: 0px; /* Радиус внешнего блока */
+	--in-radius: 0px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
 
 	--border-space: 2px; /* Размер бордера */
 
@@ -121,6 +117,8 @@
 	--checkbox-l-tip: url('../../component/_liquid/image/default/checkbox_l_tip.svg'); /*  */
 
 	--input-clear: url('../../component/_liquid/image/default/clear.svg'); /*  */
+
+	--attach-clear: url('../../component/_liquid/image/default/clear.svg'); /*  */
 
 	--radio-dot-background: var(--color-control-default); /* Фон точки */
 
@@ -151,22 +149,22 @@
 	/* Button */
 	--button-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт у button */
 
-	--button-borderRadius: --out-radius; /* Скуругление краев внешней части у button */
-	--button-before-borderRadius: --in-radius; /* Скуругление краев внутренней части у button */
+	--button-borderRadius: var(--out-radius); /* Скуругление краев внешней части у button */
+	--button-before-borderRadius: var(--in-radius); /* Скуругление краев внутренней части у button */
 
 	--control-group-borderRadius: 0px; /* Скуругление краев внешней части группы контролов */
 	--control-group-before-borderRadius: 0px; /* Скуругление краев внутренней части группы контролов */
 
-	--control-group-first-child-borderRadius: --out-radius 0 0 --out-radius; /* Скуругление краев внешней части первого контрола */
-	--control-group-first-child-before-borderRadius: --in-radius 0 0 --in-radius;  /* Скуругление краев внутренней части первого контрола */
+	--control-group-first-child-borderRadius: var(--out-radius) 0 0 var(--out-radius); /* Скуругление краев внешней части первого контрола */
+	--control-group-first-child-before-borderRadius: var(--in-radius) 0 0 var(--in-radius);  /* Скуругление краев внутренней части первого контрола */
 
-	--control-group-last-child-borderRadius: 0 --out-radius --out-radius 0; /* Скуругление краев внешней части последнего контрола */
-	--control-group-last-child-before-borderRadius: 0 --in-radius --in-radius 0; /* Скуругление краев внутренней части последннго контрола */
+	--control-group-last-child-borderRadius: 0 var(--out-radius) var(--out-radius) 0; /* Скуругление краев внешней части последнего контрола */
+	--control-group-last-child-before-borderRadius: 0 var(--in-radius) var(--in-radius) 0; /* Скуругление краев внутренней части последннго контрола */
 
-	--control-group-only-child-borderRadius: --out-radius; /* Скругление краве внешней части любого дочернего элмемента */
-	--control-group-only-child-before-borderRadius: --in-radius; /* Скуругление краев внутренней части любого дочернего элмемента */
+	--control-group-only-child-borderRadius: var(--out-radius); /* Скругление краве внешней части любого дочернего элмемента */
+	--control-group-only-child-before-borderRadius: var(--in-radius); /* Скуругление краев внутренней части любого дочернего элмемента */
 
-	--control-group-last-child-before-border: --border-space; /* Отступ правой внутренний части у control-group на размер бордера  */
+	--control-group-last-child-before-border: var(--border-space); /* Отступ правой внутренний части у control-group на размер бордера  */
 
 	--button-size-s-font: 13px; /* Размер текста текста у s-button */
 	--button-size-s-lineHeight: 32px; /* Межстрочечный интервал у s-button */
@@ -208,10 +206,10 @@
 	/* Checkbox */
 	--checkbox-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт для checkbox */
 
-	--checkbox-borderRadius: --checkbox-out-radius; /* Скругление краёв у внешней части checkbox */
-	--checkbox-before-borderRadius: --checkbox-in-radius; /* Скругление краев внутренней части checkbox */
+	--checkbox-borderRadius: var(--checkbox-out-radius); /* Скругление краёв у внешней части checkbox */
+	--checkbox-before-borderRadius: var(--checkbox-in-radius); /* Скругление краев внутренней части checkbox */
 
-	--checkbox-before-space: --checkbox-border-space; /* Отступ у внутренеей части checkbox на размер бордера */
+	--checkbox-before-space: var(--checkbox-border-space); /* Отступ у внутренеей части checkbox на размер бордера */
 
 	--checkbox-after-space: 0px; /* Отступ иконки (галочки) у checkbox */
 
@@ -251,12 +249,12 @@
 	/* Input */
 	--input-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт инпута */
 
-	--input-before-space: --border-space; /* Отступ верхний у внутренний части input на размер бордера */
-	--input-focused-boxShadow: 0 0 0 --border-space; /* Тень у фокуснутого input */
+	--input-before-space: var(--border-space); /* Отступ верхний у внутренний части input на размер бордера */
+	--input-focused-boxShadow: 0 0 0 var(--border-space); /* Тень у фокуснутого input */
 	--input-focused-inset-boxShadow: 0 0 0 0; /* Внутренняя тень у фокуснутого input */
 
-	--input-borderRadius: 4px; /* Внутренний бордер-радиус у input */
-	--input-before-borderRadius: 3px; /* Внешний бордер-радиус у input */
+	--input-borderRadius: var(--out-radius); /* Внешний у input */
+	--input-before-borderRadius: var(--in-radius); /* Внутренний бордер-радиус у input */
 
 	--input-size-s-m-clear-width: 32px; /* Ширина отчищающего блока (с крестиком) у класс s-m*/
 	--input-size-s-m-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у s-m*/
@@ -333,7 +331,7 @@
 
 	--radio-borderRadius: 50%; /* Скругление внешних краев у radio */
 	--radio-before-borderRadius: 50%; /* Скругление внутреннийх краев у radio */
-	--radio-before-space: --radio-border-space; /* Отступ внутренней часта у radio на размер бордера */
+	--radio-before-space: var(--radio-border-space); /* Отступ внутренней часта у radio на размер бордера */
 
 	--radio-size-m-fontSize: 15px; /* Размер текста у m-radio */
 	--radio-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-radio */
@@ -356,7 +354,7 @@
 	--radio-height-l-after: 6px;
 
 	--radio-checked-after-borderRadius: 50%; /* Скругление внешних краев у radio в чекнутом состоянии */
-	--radio-checked-after-background: --radio-dot-background; /* Цвет точки у чекбокса */
+	--radio-checked-after-background: var(--radio-dot-background); /* Цвет точки у чекбокса */
 
 	--radio-focused-boxShadow: 0 0 0 1px; /* Тень (бордер) у radio при фокусе */
 	--radio-focused-inset-boxShadow: 0 0 0 1px; /* Внутренняя тень (бордер) у радио при фокусе */
@@ -394,12 +392,6 @@
 
 	--select-button-size-xl-paddingRight: 42px; /* Внутренний правый отступ у xl-slect-button (на ширину иконки стрелки) */
 	--select-button-size-xl-icon-width: 36px; /* Ширина иконки (стрелки) у xl-slect-button */
-
-	--select-tick-background: --select-tick;
-	--select-tick-background-hovered: --select-tick-hovered;
-
-	--select-tick-size-s-background: --select-s-tick;
-	--select-tick-size-s-background-hovered: --select-s-tick-hovered;
 	/* /Select */
 
 
@@ -437,6 +429,7 @@
 
 	--textarea-focused-boxShadow: 0 0 0 1px; /* Тень у textarea при фокусе */
 	--textarea-borderWidth: 2px; /* Ширина бордера у textarea */
+	--textarea-borderRaduis: var(--out-radius); /* Бордер-радиус у input */
 
 	--textarea-size-s-fontSize: 13px; /* Размер текста s-textarea */
 	--textarea-size-s-lineHeight: 24px; /* Межстрочечный интервал текста у s-textarea */
@@ -469,8 +462,7 @@
 
 	/* Page */
 	--page-fontFamily: Arial, Helvetica, sans-serif;  /* Шрифт страниы */
-	--page-color: #000; /*  Цвет текста страницы */
-	--page-background: #fff; /*  Цвет фона страницы */
 	/* Page */
+
 }
 

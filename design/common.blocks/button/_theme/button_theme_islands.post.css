@@ -191,7 +191,8 @@
         }
 
         :block(button):elem(text) {
-            color: var(--color-control-typo-disable);
+			color: var(--color-control-typo-disable);
+			opacity: 0.5;
         }
 
         :block(icon) {

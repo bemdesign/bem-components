@@ -67,13 +67,13 @@
         top: 0;
         right: 0;
 
-        background-image: var(--select-tick-background);
+        background-image: var(--select-tick);
 
         transition: transform 0.1s ease-out;
     }
 
     &:block(select):mod(size s) :block(select):elem(tick) {
-        background-image: var(--select-tick-size-s-background);
+        background-image: var(--select-s-tick);
     }
 
     &:block(select):mod(opened) :block(select):elem(tick) {

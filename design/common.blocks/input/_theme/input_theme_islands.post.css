@@ -136,7 +136,7 @@
         :block(input):elem(control) {
             color: var(--color-control-typo-disable);
             cursor: default;
-        }
+		}
     }
 
     &:block(input):mod(size s) :block(input):elem(clear),

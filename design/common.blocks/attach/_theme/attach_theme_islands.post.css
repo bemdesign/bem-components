@@ -63,7 +63,7 @@
         width: var(--attach-size-s-clear-width);
         height: var(--attach-size-s-clear-height);
 
-        background-image: url(../../theme/_islands/clear_size_s.svg);
+        background-image: var(--attach-clear);
     }
 
     &:block(attach):mod(size l) :block(attach):elem(clear),

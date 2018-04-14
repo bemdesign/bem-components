@@ -3,14 +3,14 @@
 
     display: inline-block;
 
-    background: var(--color-default);
+    background: var(--color-control-default);
 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     min-height: var(--textarea-minHeight);
 
-    border-radius: 4px;
+    border-radius: --textarea-borderRaduis;
 
     border: var(--textarea-borderWidth) solid var(--color-control-border);
     outline: none;
