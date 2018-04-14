@@ -1,5 +1,5 @@
 :block(input):mod(theme islands) {
-    font-family: $input-fontFamily;
+    font-family: var(--input-fontFamily);
 
     position: relative;
 
@@ -10,16 +10,16 @@
 
     -webkit-tap-highlight-color: var(--color-control-hover);
 
-    border-radius: $input-borderRadius;
+    border-radius: var(--input-borderRadius);
 
     /* Decorative element (inner background) */
     &:before {
         position: absolute;
-        top: $input-before-space;
-        right: $input-before-space;
-        bottom: $input-before-space;
-        left: $input-before-space;
-        border-radius: $input-before-borderRadius;
+        top: var(--input-before-space);
+        right: var(--input-before-space);
+        bottom: var(--input-before-space);
+        left: var(--input-before-space);
+        border-radius: var(--input-before-borderRadius);
 
         content: '';
 
@@ -116,7 +116,7 @@
         z-index: 1;
 
         &:before {
-            box-shadow: $input-focused-boxShadow var(--color-control-border-focus), inset $input-focused-inset-boxShadow var(--color-control-border-focus); /* */
+            box-shadow: var(--input-focused-boxShadow) var(--color-control-border-focus), inset var(--input-focused-inset-boxShadow) var(--color-control-border-focus); /* */
         }
 
         :block(input):elem(control) {
@@ -141,78 +141,78 @@
 
     &:block(input):mod(size s) :block(input):elem(clear),
     &:block(input):mod(size m) :block(input):elem(clear) {
-        width: $input-size-s-m-clear-width; /* */
-        height: $input-size-s-m-clear-height; /* */
+        width: var(--input-size-s-m-clear-width); /* */
+        height: var(--input-size-s-m-clear-height); /* */
 
-        background-image: url(../../theme/_islands/clear.svg);
+        background-image: var(--input-clear);
         background-position: 50% 50%;
 
     }
 
     &:block(input):mod(size s) {
-        font-size: $input-size-s-fontSize;
-        line-height: $input-size-s-lineHeight;
+        font-size: var(--input-size-s-fontSize);
+        line-height: var(--input-size-s-lineHeight);
 
         :block(input):elem(control) {
-            height: $input-size-s-control-height;
-            padding: $input-size-s-control-padding;
+            height: var(--input-size-s-control-height);
+            padding: var(--input-size-s-control-padding);
         }
 
         &:block(input):mod(has-clear) :block(input):elem(control) {
-            padding-right: $input-size-s-has-clear-paddingRight;
+            padding-right: var(--input-size-s-has-clear-paddingRight);
         }
 
     }
 
     &:block(input):mod(size m) {
-        font-size: $input-size-m-fontSize;
-        line-height: $input-size-m-lineHeight;
+        font-size: var(--input-size-m-fontSize);
+        line-height: var(--input-size-m-lineHeight);
 
         :block(input):elem(control) {
-            height: $input-size-m-control-height;
-            padding: $input-size-m-control-padding;
+            height: var(--input-size-m-control-height);
+            padding: var(--input-size-m-control-padding);
         }
 
         &:block(input):mod(has-clear) :block(input):elem(control) {
-            padding-right: $input-size-m-has-clear-paddingRight;
+            padding-right: var(--input-size-m-has-clear-paddingRight);
         }
     }
 
     &:block(input):mod(size l) :block(input):elem(clear),
     &:block(input):mod(size xl) :block(input):elem(clear) {
-        width: $input-size-l-xl-clear-width; /* */
-        height: $input-size-l-xl-clear-height; /* */
+        width: var(--input-size-l-xl-clear-width); /* */
+        height: var(--input-size-l-xl-clear-height); /* */
 
-        background-image: url(../../theme/_islands/clear.svg);
+        background-image: var(--input-clear);
         background-position: 50% 50%;
 
     }
 
     &:block(input):mod(size l) {
-        font-size: $input-size-l-fontSize;
-        line-height: $input-size-l-lineHeight;
+        font-size: var(--input-size-l-fontSize);
+        line-height: var(--input-size-l-lineHeight);
 
         :block(input):elem(control) {
-            height: $input-size-l-control-height;
-            padding: $input-size-l-control-padding;
+            height: var(--input-size-l-control-height);
+            padding: var(--input-size-l-control-padding);
         }
 
         &:block(input):mod(has-clear) :block(input):elem(control) {
-            padding-right: $input-size-l-has-clear-paddingRight;
+            padding-right: var(--input-size-l-has-clear-paddingRight);
         }
     }
 
     &:block(input):mod(size xl) {
-        font-size: $input-size-xl-fontSize;
-        line-height: $input-size-xl-lineHeight;
+        font-size: var(--input-size-xl-fontSize);
+        line-height: var(--input-size-xl-lineHeight);
 
         :block(input):elem(control) {
-            height: $input-size-xl-control-height;
-            padding: $input-size-xl-control-padding;
+            height: var(--input-size-xl-control-height);
+            padding: var(--input-size-xl-control-padding);
         }
 
         &:block(input):mod(has-clear) :block(input):elem(control) {
-            padding-right: $input-size-xl-has-clear-paddingRight;
+            padding-right: var(--input-size-xl-has-clear-paddingRight);
         }
     }
 
@@ -232,14 +232,14 @@
 :block(control-group) {
     :block(input):mod(theme islands) {
         &:before {
-            right: $control-group-before-right;
+            right: var(--control-group-before-right);
         }
     }
 
     > :block(input):mod(theme islands):last-child,
     > :last-child :block(input):mod(theme islands) {
         &:before {
-            right: $control-group-last-child-right;
+            right: var(--control-group-last-child-right);
         }
     }
 }

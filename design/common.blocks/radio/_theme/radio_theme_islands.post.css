@@ -1,7 +1,9 @@
 :block(radio):mod(theme islands) {
-    font-family: $radio-fontFamily;
+    font-family: var(--radio-fontFamily);
 
-    -webkit-tap-highlight-color: var(--color-control-border);
+	-webkit-tap-highlight-color: var(--color-control-border);
+	
+	color: var(--color-control-typo-primary);
 
     &:hover {
         cursor: pointer;
@@ -17,73 +19,75 @@
     }
 
     :block(radio):elem(box) {
+
+		overflow: hidden; /* !!! */
+
         position: relative;
 
         display: inline-block;
 
-        border-radius: $radio-borderRadius;
+        border-radius: var(--radio-borderRadius);
         background: var(--color-control-border);
 
         &:before {
             position: absolute;
-            top: $radio-before-space;
-            right: $radio-before-space;
-            bottom: $radio-before-space;
-            left: $radio-before-space;
+            top: var(--radio-before-space);
+            right: var(--radio-before-space);
+            bottom: va(--radio-before-space);
+            left: var(--radio-before-space);
 
             content: '';
 
-            border-radius: $radio-before-borderRadius;
+            border-radius: var(--radio-before-borderRadius);
             background: var(--color-control-default);
         }
     }
 
     &:block(radio):mod(size m) {
-        font-size: $radio-size-m-fontSize;
+        font-size: var(--radio-size-m-fontSize);
 
         :block(radio):elem(box) {
-            line-height: $radio-size-m-lineHeight;
+            line-height: var(--radio-size-m-lineHeight);
 
-            top: $radio-size-m-top;
+            top: var(--radio-size-m-top);
 
-            width: $radio-size-m-width;
-            height: $radio-size-m-height;
-            margin-right: $radio-size-m-marginRight;
+            width: var(--radio-size-m-width);
+            height: var(--radio-size-m-height);
+            margin-right: var(--radio-size-m-marginRight);
 
             &:after {
-                top: $radio-size-m-after;
-                left: $radio-size-m-after;
+                top: 50%;
+                left: 50%;
 
-                margin-top: calc($radio-width-m-after / -2);
-                margin-left: calc($radio-height-m-after / -2);
+                margin-top: calc( -1 * (0.5 * var(--radio-width-m-after)) );
+                margin-left: calc( -1 * (0.5 * var(--radio-width-m-after)) );
 
-                width: $radio-width-m-after;
-                height: $radio-height-m-after;
+                width: var(--radio-width-m-after);
+                height: var(--radio-height-m-after);
             }
         }
     }
 
     &:block(radio):mod(size l) {
-        font-size: $radio-size-l-fontSize;
-
+        font-size: var(--radio-size-l-fontSize);
         :block(radio):elem(box) {
-            line-height: $radio-size-l-lineHeight;
+            line-height: var(--radio-size-l-lineHeight);
 
-            top: $radio-size-l-top;
+            top: var(--radio-size-l-top);
 
-            width: $radio-size-l-width;
-            height: $radio-size-l-height;
-            margin-right: $radio-size-l-marginRight;
+            width: var(--radio-size-l-width);
+            height: var(--radio-size-l-height);
+            margin-right: var(--radio-size-l-marginRight);
 
             &:after {
-                top: $radio-size-l-after;
-                left: $radio-size-l-after;
+                top: 50%;
+                left: 50%;
 
-                margin-top: calc($radio-width-l-after / -2);
-                margin-left: calc($radio-height-l-after / -2);
+                margin-top: calc( -1 * (0.5 * var(--radio-width-l-after)) );
+                margin-left: calc( -1 * (0.5 * var(--radio-height-l-after)) );
 
-                width: $radio-width-l-after;
-                height: $radio-height-l-after;
+                width: var(--radio-width-l-after);
+                height: var(--radio-height-l-after);
             }
         }
     }
@@ -99,8 +103,8 @@
             &:after {
                 position: absolute;
 
-                border-radius: $radio-checked-after-borderRadius;
-                background: $radio-dot-background;
+                border-radius: var(--radio-checked-after-borderRadius);
+                background: var(--radio-dot-background);
 
                 content: '';
             }
@@ -109,7 +113,7 @@
 
     &:block(radio):mod(focused) {
         :block(radio):elem(box):before {
-            box-shadow: $radio-focused-boxShadow var(--color-control-border-focus), inset $radio-focused-inset-boxShadow var(--color-control-border-focus);
+            box-shadow: var(--radio-focused-boxShadow) var(--color-control-border-focus), inset var(--radio-focused-inset-boxShadow) var(--color-control-border-focus);
         }
     }
 
@@ -119,10 +123,13 @@
         }
 
         &:block(radio):mod(checked) :block(radio):elem(box) {
-           background: var(--color-control-border-check-hover);
+		   background: var(--color-control-border-check-hover);
+		   
+		   
         }
-    }
-
+	}
+	
+	
     &:block(radio):mod(disabled) {
         cursor: default;
 
@@ -147,19 +154,19 @@
 
     &:block(radio):mod(type button) {
         display: inline-block;
-    }
+    } 
 
     &:block(radio):mod(type line) {
         &:block(radio):mod(size m) {
-            margin-right: $radio-line-size-m-marginRight;
+            margin-right: var(--radio-line-size-m-marginRight);
         }
 
         &:block(radio):mod(size l) {
-            margin-right: $radio-line-size-l-marginRight;
+            margin-right: var(--radio-line-size-l-marginRight);
         }
 
         &:last-child {
-            margin-right: $radio-line-last-child-marginRight;
+            margin-right: var(--radio-line-last-child-marginRight);
         }
     }
 }

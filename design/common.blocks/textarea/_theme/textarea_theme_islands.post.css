@@ -1,5 +1,5 @@
 :block(textarea):mod(theme islands) {
-    font-family: $textarea-fontFamily;
+    /* font-family: var(--textarea-fontFamily); */
 
     display: inline-block;
 
@@ -8,11 +8,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    min-height: $textarea-minHeight;
+    min-height: var(--textarea-minHeight);
 
     border-radius: 4px;
 
-    border: $textarea-borderWidth solid var(--color-control-border);
+    border: var(--textarea-borderWidth) solid var(--color-control-border);
     outline: none;
 
     -webkit-appearance: none;
@@ -49,26 +49,26 @@
     }
 
     &:block(textarea):mod(size s) {
-        font-size: $textarea-size-s-fontSize;
-        line-height: $textarea-size-s-lineHeight;
-        padding-left: $textarea-size-s-paddingLeft;
+        font-size: var(--textarea-size-s-fontSize);
+        line-height: var(--textarea-size-s-lineHeight);
+        padding-left: var(--textarea-size-s-paddingLeft);
     }
 
     &:block(textarea):mod(size m) {
-        font-size: $textarea-size-m-fontSize;
-        line-height: $textarea-size-m-lineHeight;
-        padding: $textarea-size-m-padding;
+        font-size: var(--textarea-size-m-fontSize);
+        line-height: var(--textarea-size-m-lineHeight);
+        padding: var(--textarea-size-m-padding);
     }
 
     &:block(textarea):mod(size l) {
-        font-size: $textarea-size-l-fontSize;
-        line-height: $textarea-size-l-lineHeight;
-        padding: $textarea-size-l-padding;
+        font-size: var(--textarea-size-l-fontSize);
+        line-height: var(--textarea-size-l-lineHeight);
+        padding: var(--textarea-size-l-padding);
     }
 
     &:block(textarea):mod(size xl) {
-        font-size: $textarea-size-xl-fontSize;
-        line-height: $textarea-size-xl-lineHeight;
-        padding-left: $textarea-size-xl-paddingLeft;
+        font-size: var(--textarea-size-xl-fontSize);
+        line-height: var(--textarea-size-xl-lineHeight);
+        padding-left: var(--textarea-size-xl-paddingLeft);
     }
 }

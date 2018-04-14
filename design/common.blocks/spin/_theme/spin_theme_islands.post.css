@@ -7,7 +7,7 @@
 
     box-sizing: border-box;
 
-    border: $spin-borderWidth solid transparent;
+    border: var(--spin-borderWidth) solid transparent;
     border-radius: 50%;
 
     &:after {

@@ -4,7 +4,7 @@
 
     margin: -9999px 0 0 -9999px; /* to prevent clickability and visiblity of internal elements with visiblity: visible */
 
-    background: rgba(50, 50, 50, 0.2);
+    background: rgba(50, 50, 50, 0.2); /* !!! */
 
     &,
     & :block(modal):elem(content) {
@@ -14,10 +14,10 @@
     }
 
     :block(modal):elem(content) {
-        margin: $modal-margin;
+        margin: var(--modal-margin);
 
-        border: $modal-borderWidth solid var(--color-control-border);
-        background-color: #fff;
+        border: var(--modal-borderWidth) solid var(--color-control-border);
+        background-color: var(--color-control-default);;
     }
 
     &:block(modal):mod(js inited) {

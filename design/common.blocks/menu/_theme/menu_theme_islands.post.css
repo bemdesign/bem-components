@@ -1,5 +1,5 @@
 :block(menu):mod(theme islands) {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--menu-fontFamily);
 
     box-sizing: border-box;
 
@@ -21,10 +21,10 @@
 
     @each $size, $fontSize, $lineHeight, $paddingVert, $paddingHor in
     (s,    m,    l,    xl),
-    ($menu-size-s-fontSize, $menu-size-m-fontSize, $menu-size-l-fontSize, $menu-size-xl-fontSize),  /* fontSize */
-    ($menu-size-s-lineHeight, $menu-size-m-lineHeight, $menu-size-l-lineHeight, $menu-size-xl-lineHeight), /* lineHeight */
-    ($menu-size-s-vertSpace,  $menu-size-m-vertSpace,  $menu-size-l-vertSpace,  $menu-size-xl-vertSpace),   /* paddingVer */
-    ($menu-size-s-horSpace, $menu-size-m-horSpace, $menu-size-l-horSpace, $menu-size-xl-horSpace)   /* paddingHor */ {
+    (var(--menu-size-s-fontSize), var(--menu-size-m-fontSize), var(--menu-size-l-fontSize), var(--menu-size-xl-fontSize)),  /* fontSize */
+    (var(--menu-size-s-lineHeight), var(--menu-size-m-lineHeight), var(--menu-size-l-lineHeight), var(--menu-size-xl-lineHeight)), /* lineHeight */
+    (var(--menu-size-s-vertSpace),  var(--menu-size-m-vertSpace),  var(--menu-size-l-vertSpace),  var(--menu-size-xl-vertSpace)),   /* paddingVer */
+    (var(--menu-size-s-horSpace), var(--menu-size-m-horSpace), var(--menu-size-l-horSpace), var(--menu-size-xl-horSpace))   /* paddingHor */ {
         &:block(menu):mod(size $size) {
             font-size: $fontSize;
             line-height: $lineHeight;
@@ -49,7 +49,7 @@
     }
 
     :block(menu):elem(group) {
-        border: $menu-group-borderWidth solid  var(--color-border);
+        border: var(--menu-group-borderWidth) solid var(--color-border);
         border-width: 1px 0;
 
         &-title {

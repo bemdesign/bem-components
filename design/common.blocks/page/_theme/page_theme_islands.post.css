@@ -3,12 +3,14 @@ html {
 }
 
 :block(page):mod(theme islands) {
-	font: 13px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/* font-family: var(--page-fontFamily); */
 
 	min-height: 100%;
 	margin: 0;
 
-	color: #000;
-	background: #fff;
+	color: var(--page-color);
+	background: var(--page-background);
 
 }
+
+

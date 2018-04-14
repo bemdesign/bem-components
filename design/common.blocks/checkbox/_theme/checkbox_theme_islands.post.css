@@ -1,10 +1,12 @@
 :block(checkbox):mod(theme islands) {
     position: relative; /* fix #1538 */
 
-    font-family: $checkbox-fontFamily;
+    font-family: var(--checkbox-fontFamily);
 
     -webkit-tap-highlight-color: var(--color-typo-primary);
 
+	color: var(--color-control-typo-primary);
+	
     &:hover {
         cursor: pointer;
     }
@@ -28,21 +30,21 @@
 
         &:before {
             position: absolute;
-            top: $checkbox-before-space;
-            right: $checkbox-before-space;
-            bottom: $checkbox-before-space;
-            left: $checkbox-before-space;
+            top: var(--checkbox-before-space);
+            right: var(--checkbox-before-space);
+            bottom: var(--checkbox-before-space);
+            left: var(--checkbox-before-space);
 
             content: '';
 
-            border-radius: $checkbox-before-borderRadius;
+            border-radius: var(--checkbox-before-borderRadius);
             background: var(--color-control-default);
         }
 
         &:after {
             position: absolute;
-            top: $checkbox-after-space;
-            left: $checkbox-after-space;
+            top: var(--checkbox-after-space);
+            left: var(--checkbox-after-space);
 
             content: '';
             top: 0px;
@@ -62,47 +64,47 @@
     }
 
     &:block(checkbox):mod(size m) {
-        font-size: $checkbox-size-m-fontSize;
+        font-size: var(--checkbox-size-m-fontSize);
 
         :block(checkbox):elem(box) {
-            line-height: $checkbox-size-m-lineHeight;
+            line-height: var(--checkbox-size-m-lineHeight);
 
-            top: $checkbox-size-m-top;
+            top: var(--checkbox-size-m-top);
 
-            width: $checkbox-size-m-width;
-            height: $checkbox-size-m-height;
-            margin-right: $checkbox-size-m-marginRight;
+            width: var(--checkbox-size-m-width);
+            height: var(--checkbox-size-m-height);
+            margin-right: var(--checkbox-size-m-marginRight);
 
             &:after {
-                width: $checkbox-size-m-after-width;
-                height: $checkbox-size-m-after-width;
+                width: var(--checkbox-size-m-after-width);
+                height: var(--checkbox-size-m-after-width);
 
-                background-image: $checkbox-m-tip;
+                background-image: var(--checkbox-m-tip);
 
-                transform: translateY($checkbox-size-m-transformY);
+                transform: translateY(var(--checkbox-size-m-transformY));
             }
         }
     }
 
     &:block(checkbox):mod(size l) {
-        font-size: $checkbox-size-l-fontSize;
+        font-size: var(--checkbox-size-l-fontSize);
 
         :block(checkbox):elem(box) {
-            line-height: $checkbox-size-l-lineHeight;
+            line-height: var(--checkbox-size-l-lineHeight);
 
-            top: $checkbox-size-l-top;
+            top: var(--checkbox-size-l-top);
 
-            width: $checkbox-size-l-width;
-            height: $checkbox-size-l-height;
-            margin-right: $checkbox-size-l-marginRight;
+            width: var(--checkbox-size-l-width);
+            height: var(--checkbox-size-l-height);
+            margin-right: var(--checkbox-size-l-marginRight);
 
             &:after {
-                width: $checkbox-size-l-after-width;
-                height: $checkbox-size-l-after-height;
+                width: var(--checkbox-size-l-after-width);
+                height: var(--checkbox-size-l-after-height);
 
-                background-image: $checkbox-l-tip;
+                background-image: var(--checkbox-l-tip);
 
-                transform: translateY($checkbox-size-l-transformY);
+                transform: translateY(var(--checkbox-size-l-transformY));
             }
         }
     }
@@ -158,7 +160,7 @@
             background: var(--color-control-disable-check);
 
             &:after {
-                opacity: $checkbox-disabled-checked-opacity;
+                opacity: var(--checkbox-disabled-checked-opacity);
             }
         }
     }
@@ -169,16 +171,16 @@
 
     &:block(checkbox):mod(type line) {
         &:block(checkbox):mod(size m) {
-            margin-right: $checkbox-line-size-m-marginRight;
+            margin-right: var(--checkbox-line-size-m-marginRight);
         }
 
         &:block(checkbox):mod(size l) {
-            margin-right: $checkbox-line-size-l-marginRight;
+            margin-right: var(--checkbox-line-size-l-marginRight);
         }
 
         &:last-child
         {
-            margin-right: $checkbox-line-last-child-marginRight;
+            margin-right: var(--checkbox-line-last-child-marginRight);
         }
     }
 }

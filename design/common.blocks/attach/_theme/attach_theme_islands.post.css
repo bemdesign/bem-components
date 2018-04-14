@@ -1,5 +1,5 @@
 :block(attach):mod(theme islands) {
-    font-family: $attach-fontFamily;
+    font-family: var(--attach-fontFamily);
 
     display: inline-block;
 
@@ -53,23 +53,23 @@
         }
     }
 
-    &:block(attach):mod(size s) { font-size: $attach-size-s-fontSize; }
-    &:block(attach):mod(size m) { font-size: $attach-size-m-fontSize; }
-    &:block(attach):mod(size l) { font-size: $attach-size-l-fontSize; }
-    &:block(attach):mod(size xl) { font-size: $attach-size-xl-fontSize; }
+    &:block(attach):mod(size s) { font-size: var(--attach-size-s-fontSize); }
+    &:block(attach):mod(size m) { font-size: var(--attach-size-m-fontSize); }
+    &:block(attach):mod(size l) { font-size: var(--attach-size-l-fontSize); }
+    &:block(attach):mod(size xl) { font-size: var(--attach-size-xl-fontSize); }
 
     &:block(attach):mod(size s) :block(attach):elem(clear),
     &:block(attach):mod(size m) :block(attach):elem(clear) {
-        width: $attach-size-s-clear-width;
-        height: $attach-size-s-clear-height;
+        width: var(--attach-size-s-clear-width);
+        height: var(--attach-size-s-clear-height);
 
         background-image: url(../../theme/_islands/clear_size_s.svg);
     }
 
     &:block(attach):mod(size l) :block(attach):elem(clear),
     &:block(attach):mod(size xl) :block(attach):elem(clear) {
-        width: $attach-size-l-clear-width;
-        height: $attach-size-l-clear-height;
+        width: var(--attach-size-l-clear-width);
+        height: var(--attach-size-l-clear-height);
 
         background-image: url(../../theme/_islands/clear_size_l.svg);
     }

@@ -25,7 +25,7 @@
         cursor: pointer;
 
         background-color: var(--color-control-hover);
-        color: $color-typo-primary;
+        color: var(--color-control-typo-primary);
     }
 
     &:block(menu):elem(item):mod(type link) {
