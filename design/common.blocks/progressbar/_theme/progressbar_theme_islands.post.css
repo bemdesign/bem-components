@@ -2,7 +2,7 @@
     overflow: hidden;
 
     :block(progressbar):elem(bar) {
-        height: $progressbar-height;
+        height: var(--progressbar-height);
 
         background: var(--color-control-border-focus);
     }
