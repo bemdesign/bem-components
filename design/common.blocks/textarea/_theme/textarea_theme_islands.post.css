@@ -46,6 +46,14 @@
         color: var(--color-control-typo-disable);
         border-color: transparent;
         background: var(--color-control-disable); /*       */
+
+        &::-webkit-input-placeholder {
+            opacity: 0.4;
+        }
+
+        &::-moz-placeholder {
+            opacity: 0.4;
+        }
     }
 
     &:block(textarea):mod(size s) {

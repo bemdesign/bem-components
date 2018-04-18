@@ -1,6 +1,6 @@
 {
   "name": "bem-components-custom",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "patters",
   "main": "index.js",
   "scripts": {

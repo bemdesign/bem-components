@@ -6,7 +6,7 @@
 	$color-control-hover:                   color($color-phantom a(15%)); /* Цвет фона контрола по ховеру */
 	$color-control-press:                   color($color-phantom a(20%)); /* Цвет фона контрола по нажатию */
 
-	$color-control-border:                  color($color-phantom l(38%)); /* Цвет бордеров котрола */
+	$color-control-border:                  color($color-phantom l(40%)); /* Цвет бордеров котрола */
 	$color-control-border-hover:            color($color-phantom l(35%)); /* Цвет бордеров контрола по ховеру */
 	$color-control-border-press:            color($color-phantom l(40%)); /* Цвет бордеров контрола по нажатию */
 
@@ -97,8 +97,8 @@
 
 
 	/* --- Легкий кастом --- */
-	--out-radius: 0px; /* Радиус внешнего блока */
-	--in-radius: 0px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
+	--out-radius: 4px; /* Радиус внешнего блока */
+	--in-radius: 3px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
 
 	--border-space: 2px; /* Размер бордера */
 
@@ -252,8 +252,8 @@
 	--input-focused-boxShadow: 0 0 0 var(--border-space); /* Тень у фокуснутого input */
 	--input-focused-inset-boxShadow: 0 0 0 0; /* Внутренняя тень у фокуснутого input */
 
-	--input-borderRadius: var(--out-radius); /* Внешний у input */
-	--input-before-borderRadius: var(--in-radius); /* Внутренний бордер-радиус у input */
+	--input-borderRadius: 0px; /* Внешний у input */
+	--input-before-borderRadius: 0px; /* Внутренний бордер-радиус у input */
 
 	--input-size-s-m-clear-width: 32px; /* Ширина отчищающего блока (с крестиком) у класс s-m*/
 	--input-size-s-m-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у s-m*/
