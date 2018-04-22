@@ -81,7 +81,7 @@
 	--color-control-border-disable: $color-control-border-disable; /* Цвет бордеров неактивного контрола */
 
 
-	/* Typogrphy */
+	/* Typography */
 	--color-control-typo-primary: $color-control-typo-primary; /* Цвет основного текста контрола */
 	--color-control-typo-placeholder: $color-control-typo-placeholder; /* Цвет плейсхолдера контрола */
 	--color-control-typo-affect: $color-control-typo-affect; /* Цвет текста внутри акцентного блока */
