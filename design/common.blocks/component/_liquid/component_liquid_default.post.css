@@ -26,18 +26,18 @@
 	$color-control-border-focus:            color($color-project l(+15%)); /* Цвет бордера контрола при фокусе */
 
 
-	/* Typography */
-	$color-control-typo-primary:            $color-base; /* Цвет основного текста контрола */
-	$color-control-typo-placeholder:        color($color-phantom l(+60%)); /* Цвет плейсхолдера контрола */
-	$color-control-typo-affect:             color($color-essential); /* Цвет текста внитри акцентного блока */
-	$color-control-typo-disable:            color($color-phantom l(+60%)); /* Цвет основного текста неактивного контрола */
-
-
 	/* Disable */
 	$color-control-disable:                 color($color-phantom l(90%)); /* Цвет фона неактивного контрола */
 	$color-control-disable-check:           color($color-phantom l(88%)); /* Цвет фона чекнутого неактивного контрола */
 
 	$color-control-border-disable:          color($color-phantom l(+60%)); /* Цвет бордеров неактивного контрола */
+
+
+	/* Typography */
+	$color-control-typo-primary:            $color-base; /* Цвет основного текста контрола */
+	$color-control-typo-placeholder:        color($color-phantom l(+60%)); /* Цвет плейсхолдера контрола */
+	$color-control-typo-affect:             color($color-essential); /* Цвет текста внитри акцентного блока */
+	$color-control-typo-disable:            color($color-phantom l(+60%)); /* Цвет основного текста неактивного контрола */
 
 
 	/* Links */
@@ -74,19 +74,18 @@
 	--color-control-border-focus: $color-control-border-focus; /* Цвет бордера контрола при фокусе */
 
 
-	/* Typography */
-	--color-control-typo-primary: $color-control-typo-primary; /* Цвет основного текста контрола */
-	--color-control-typo-placeholder: $color-control-typo-placeholder; /* Цвет плейсхолдера контрола */
-	--color-control-typo-affect: $color-control-typo-affect; /* Цвет текста внутри акцентного блока */
-	--color-control-typo-disable: $color-control-typo-disable; /* Цвет основного текста неактивного контрола */
-
-
 	/* Disable */
 	--color-control-disable: $color-control-disable; /* Цвет фона неактивного контрола */
 	--color-control-disable-check: $color-control-disable-check; /* Цвет чекнутого неактивного контрола */
 
 	--color-control-border-disable: $color-control-border-disable; /* Цвет бордеров неактивного контрола */
 
+
+	/* Typography */
+	--color-control-typo-primary: $color-control-typo-primary; /* Цвет основного текста контрола */
+	--color-control-typo-placeholder: $color-control-typo-placeholder; /* Цвет плейсхолдера контрола */
+	--color-control-typo-affect: $color-control-typo-affect; /* Цвет текста внутри акцентного блока */
+	--color-control-typo-disable: $color-control-typo-disable; /* Цвет основного текста неактивного контрола */
 
 
 	/* Links */
@@ -467,4 +466,3 @@
 	/* Page */
 
 }
-
