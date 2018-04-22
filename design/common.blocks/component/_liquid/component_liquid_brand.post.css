@@ -10,10 +10,6 @@
 	$color-control-border-hover:            color($color-phantom l(35%)); /* Цвет бордеров контрола по ховеру */
 	$color-control-border-press:            color($color-phantom l(40%)); /* Цвет бордеров контрола по нажатию */
 
-	$color-control-typo-primary:            $color-base; /* Цвет основного текста контрола */
-	$color-control-typo-placeholder:        color($color-phantom l(+60%)); /* Цвет плейсхолдера контрола */
-	$color-control-typo-affect:             color($color-essential); /* Цвет текста внитри акцентного блока */
-
 
 	/* Action / Focus / Check */
 	$color-control-action:                  color($color-project l(+15%)); /* Цвнт фона активного контрола */
@@ -36,6 +32,11 @@
 
 	$color-control-border-disable:          color($color-phantom l(+60%)); /* Цвет бордеров неактивного контрола */
 
+
+	/* Typography */
+	$color-control-typo-primary:            $color-base; /* Цвет основного текста контрола */
+	$color-control-typo-placeholder:        color($color-phantom l(+60%)); /* Цвет плейсхолдера контрола */
+	$color-control-typo-affect:             color($color-essential); /* Цвет текста внитри акцентного блока */
 	$color-control-typo-disable:            color($color-phantom l(+60%)); /* Цвет основного текста неактивного контрола */
 
 
@@ -56,10 +57,6 @@
 	--color-control-border: $color-control-border; /* Цвет бордеров контрола */
 	--color-control-border-hover: $color-control-border-hover; /* Цвет бордеров контрола по ховеру */
 	--color-control-border-press: $color-control-border-press; /* Цвет бордеров контрола по нажатию */
-
-	--color-control-typo-primary: $color-control-typo-primary; /* Цвет основного текста контрола */
-	--color-control-typo-placeholder: $color-control-typo-placeholder; /* Цвет плейсхолдера контрола */
-	--color-control-typo-affect: $color-control-typo-affect; /* Цвет текста внутри акцентного блока1 */
 
 
 	/* Action / Focus / Check */
@@ -83,6 +80,11 @@
 
 	--color-control-border-disable: $color-control-border-disable; /* Цвет бордеров неактивного контрола */
 
+
+	/* Typogrphy */
+	--color-control-typo-primary: $color-control-typo-primary; /* Цвет основного текста контрола */
+	--color-control-typo-placeholder: $color-control-typo-placeholder; /* Цвет плейсхолдера контрола */
+	--color-control-typo-affect: $color-control-typo-affect; /* Цвет текста внутри акцентного блока */
 	--color-control-typo-disable: $color-control-typo-disable; /* Цвет основного текста неактивного контрола */
 
 
