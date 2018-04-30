@@ -40,8 +40,8 @@
 
 
 	/* Links */
-	$color-control-link:                    $color-path; /* Цвет ссылки */
-	$color-control-link-hover:              $color-path; /* Цвет ссылоки по ховеру */
+	$color-control-link:                    $color-base-path; /* Цвет ссылки */
+	$color-control-link-hover:              $color-base-path; /* Цвет ссылоки по ховеру */
 	$color-control-link-external:           $color-base-path; /* Цвет внешней ссылоки */
 	$color-control-link-ghost:              $color-base-phantom; /* Цвет второстепенной ссылоки */
 	$color-control-link-ghost-hover:        color($color-base-phantom l(-10)); /* Цвет второстепенной ссылоки по ховеру */
