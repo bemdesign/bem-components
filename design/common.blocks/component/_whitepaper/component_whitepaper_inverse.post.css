@@ -1,4 +1,4 @@
-:block(component):mod(liquid inverse) {
+:block(component):mod(whitepaper inverse) {
 
 	/* Смысловая политра цветов, наследуемая от основных цветов (изменяется при детальной настройки цветовой схемы) */
 	/* Default */
@@ -108,16 +108,16 @@
 	--radio-border-space: 0px; /* Размер бордера радио */
 	--checkbox-border-space: 0px; /* Размер бордера чекбокса*/
 
-	--select-tick: url('../../component/_liquid/image/inverse/arrow.svg'); /*  */
+	--select-tick: url('../../component/_whitepaper/image/inverse/arrow.svg'); /*  */
 
-	--select-s-tick: url('../../component/_liquid/image/inverse/arrow-s.svg'); /*  */
+	--select-s-tick: url('../../component/_whitepaper/image/inverse/arrow-s.svg'); /*  */
 
-	--checkbox-m-tip: url('../../component/_liquid/image/inverse/checkbox_m_tip.svg'); /*  */
-	--checkbox-l-tip: url('../../component/_liquid/image/inverse/checkbox_l_tip.svg'); /*  */
+	--checkbox-m-tip: url('../../component/_whitepaper/image/inverse/checkbox_m_tip.svg'); /*  */
+	--checkbox-l-tip: url('../../component/_whitepaper/image/inverse/checkbox_l_tip.svg'); /*  */
 
-	--input-clear: url('../../component/_liquid/image/inverse/clear.svg'); /*  */
+	--input-clear: url('../../component/_whitepaper/image/inverse/clear.svg'); /*  */
 
-	--attach-clear: url('../../component/_liquid/image/inverse/clear.svg'); /*  */
+	--attach-clear: url('../../component/_whitepaper/image/inverse/clear.svg'); /*  */
 
 	--radio-dot-background: var(--color-control-default); /* Фон точки */
 

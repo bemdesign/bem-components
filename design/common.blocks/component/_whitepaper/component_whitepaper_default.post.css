@@ -1,4 +1,4 @@
-:block(component):mod(liquid default) {
+:block(component):mod(whitepaper default) {
 
 	/* Смысловая политра цветов, наследуемая от основных цветов из блока Theme (изменяется при детальной настройки цветовой схемы) */
 	/* Default */
@@ -108,16 +108,16 @@
 	--radio-border-space: 0px; /* Размер бордера радио */
 	--checkbox-border-space: 0px; /* Размер бордера чекбокса*/
 
-	--select-tick: url('../../component/_liquid/image/default/arrow.svg'); /*  */
+	--select-tick: url('../../component/_whitepaper/image/default/arrow.svg'); /*  */
 
-	--select-s-tick: url('../../component/_liquid/image/default/arrow-s.svg'); /*  */
+	--select-s-tick: url('../../component/_whitepaper/image/default/arrow-s.svg'); /*  */
 
-	--checkbox-m-tip: url('../../component/_liquid/image/default/checkbox_m_tip.svg'); /*  */
-	--checkbox-l-tip: url('../../component/_liquid/image/default/checkbox_l_tip.svg'); /*  */
+	--checkbox-m-tip: url('../../component/_whitepaper/image/default/checkbox_m_tip.svg'); /*  */
+	--checkbox-l-tip: url('../../component/_whitepaper/image/default/checkbox_l_tip.svg'); /*  */
 
-	--input-clear: url('../../component/_liquid/image/default/clear.svg'); /*  */
+	--input-clear: url('../../component/_whitepaper/image/default/clear.svg'); /*  */
 
-	--attach-clear: url('../../component/_liquid/image/default/clear.svg'); /*  */
+	--attach-clear: url('../../component/_whitepaper/image/default/clear.svg'); /*  */
 
 	--radio-dot-background: var(--color-control-default); /* Фон точки */
 
