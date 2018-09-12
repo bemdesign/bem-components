@@ -1,0 +1,466 @@
+:block(component):mod(whitepaper warning) {
+
+	/* Смысловая политра цветов, наследуемая от основных цветов из блока Theme (изменяется при детальной настройки цветовой схемы) */
+	/* Default */
+	$color-control-default:                 color($color-base-phantom l(40%)); /* Цвет фона контрола */
+	$color-control-hover:                   color($color-base-phantom a(15%)); /* Цвет фона контрола по ховеру */
+	$color-control-press:                   color($color-base-phantom a(20%)); /* Цвет фона контрола по нажатию */
+
+	$color-control-border:                  color($color-base-phantom l(40%)); /* Цвет бордеров котрола */
+	$color-control-border-hover:            color($color-base-phantom l(35%)); /* Цвет бордеров контрола по ховеру */
+	$color-control-border-press:            color($color-base-phantom l(40%)); /* Цвет бордеров контрола по нажатию */
+
+	$color-control-typo-primary:            $color-base-base; /* Цвет основного текста контрола */
+	$color-control-typo-placeholder:        color($color-base-phantom l(+60%)); /* Цвет плейсхолдера контрола */
+	$color-control-typo-affect:             color($color-base-essential); /* Цвет текста внитри акцентного блока */
+
+
+	/* Action / Focus / Check */
+	$color-control-action:                  color($color-base-project l(+15%)); /* Цвнт фона активного контрола */
+	$color-control-action-hover:            color($color-base-project l(+20%)); /* Цвет фона активного контрола по ховеру */
+	$color-control-action-focus:            $color-base-project; /* Цвет фон активного контрола при фокусе */
+	$color-control-action-press:            $color-base-project; /* Цвет фон активного контрола по нажатию */
+
+	$color-control-check:                   color($color-base-project l(+11%)); /* Цвет фона чекнутого контрола */
+	$color-control-check-press:             color($color-base-project l(+25%)); /* Цвет фона чекнутого контрола по нажатию */
+
+	$color-control-border-check:            color($color-base-project l(+11%)); /* Цвет бордера чекнутого контрола */
+	$color-control-border-check-press:      color($color-base-base a(35%)); /* Цвет бордера чекнутого контрола при фокусе по нажатию */
+	$color-control-border-check-hover:      color($color-base-project l(-2%)); /* Цвет бордера чекнутого контрола по ховеру */
+	$color-control-border-focus:            $color-base-project; /* Цвет бордера контрола при фокусе */
+
+
+	/* Disable */
+	$color-control-disable:                 color($color-base-phantom l(44%)); /* Цвет фона неактивного контрола */
+	$color-control-disable-check:           color($color-base-phantom l(48%)); /* Цвет фона чекнутого неактивного контрола */
+
+	$color-control-border-disable:          color($color-base-phantom l(+60%)); /* Цвет бордеров неактивного контрола */
+
+	$color-control-typo-disable:            color($color-base-phantom l(+60%)); /* Цвет основного текста неактивного контрола */
+
+
+	/* Links */
+	$color-control-link:                    $color-base-path; /* Цвет ссылки */
+	$color-control-link-hover:              $color-base-path; /* Цвет ссылоки по ховеру */
+	$color-control-link-external:           $color-base-path; /* Цвет внешней ссылоки */
+	$color-control-link-ghost:              $color-base-phantom; /* Цвет второстепенной ссылоки */
+	$color-control-link-ghost-hover:        color($color-base-phantom l(-10)); /* Цвет второстепенной ссылоки по ховеру */
+	$color-control-link-visited:            color($color-base-path s(10%)); /* Цвет посещенной ссылоки */
+
+
+	/* Default */
+	--color-control-default: $color-control-default; /* Цвет фона контрола */
+	--color-control-hover: $color-control-hover; /* Цвет фона контрола по ховеру */
+	--color-control-press: $color-control-press; /* Цвет фона контрола по нажатию */
+
+	--color-control-border: $color-control-border; /* Цвет бордеров контрола */
+	--color-control-border-hover: $color-control-border-hover; /* Цвет бордеров контрола по ховеру */
+	--color-control-border-press: $color-control-border-press; /* Цвет бордеров контрола по нажатию */
+
+	--color-control-typo-primary: $color-control-typo-primary; /* Цвет основного текста контрола */
+	--color-control-typo-placeholder: $color-control-typo-placeholder; /* Цвет плейсхолдера контрола */
+	--color-control-typo-affect: $color-control-typo-affect; /* Цвет текста внутри акцентного блока1 */
+
+
+	/* Action / Focus / Check */
+	--color-control-action: $color-control-action; /* Цвет фона активного контрола */
+	--color-control-action-hover: $color-control-action-hover; /* Цвет фона активного контрола по ховеру */
+	--color-control-action-focus: $color-control-action-focus; /* Цвет фона активного контрола при фокусе */
+	--color-control-action-press: $color-control-action-press; /* Цвет фон активного контрола по нажатию */
+
+	--color-control-check: $color-control-check; /* Цвет фона чекнутого контрола */
+	--color-control-check-press: $color-control-check-press; /* Цвет фона чекнутого контрола по нажатию */
+
+	--color-control-border-check: $color-control-border-check; /* Цвет бордера чекнутого контрола */
+	--color-control-border-check-press: $color-control-border-check-press; /* Цвет бордера чекнутого контрола при фокусе по нажатию */
+	--color-control-border-check-hover: $color-control-border-check-hover; /* Цвет бордера чекнутого контрола по ховеру */
+	--color-control-border-focus: $color-control-border-focus; /* Цвет бордера контрола при фокусе */
+
+
+	/* Disable */
+	--color-control-disable: $color-control-disable; /* Цвет фона неактивного контрола */
+	--color-control-disable-check: $color-control-disable-check; /* Цвет чекнутого неактивного контрола */
+
+	--color-control-border-disable: $color-control-border-disable; /* Цвет бордеров неактивного контрола */
+
+	--color-control-typo-disable: $color-control-typo-disable; /* Цвет основного текста неактивного контрола */
+
+
+	/* Links */
+	--color-control-link: $color-control-link; /* Цвет ссылки */
+	--color-control-link-hover: $color-control-link-hover; /* Цвет ссылки по ховеру */
+	--color-control-link-external: $color-control-link-external; /* Цвет внешней ссылоки */
+	--color-control-link-ghost: $color-control-link-ghost; /* Цвет второстепенной ссылоки */
+	--color-control-link-ghost-hover: $color-control-link-ghost-hover;  /* Цвет второстепенной ссылоки по ховеру */
+	--color-control-link-visited: $color-control-link-visited; /* Цвет посещеннрй ссылоки */
+
+
+
+	/* --- Легкий кастом --- */
+	--out-radius: 4px; /* Радиус внешнего блока */
+	--in-radius: 3px; /* Радиус внутреннего блока (Нужно дотюнить через calc от внешненго) */
+
+	--border-space: 2px; /* Размер бордера */
+
+	--checkbox-out-radius: 3px; /* Радиус внешнего блока чекбокса*/
+	--checkbox-in-radius: 2px; /* Радиус внутреннего блока чекбокса*/
+
+	--radio-border-space: 0px; /* Размер бордера радио */
+	--checkbox-border-space: 0px; /* Размер бордера чекбокса*/
+
+	--select-tick: url('../../component/_whitepaper/image/brand/arrow.svg'); /*  */
+
+	--select-s-tick: url('../../component/_whitepaper/image/brand/arrow-s.svg'); /*  */
+
+	--checkbox-m-tip: url('../../component/_whitepaper/image/brand/checkbox_m_tip.svg'); /*  */
+	--checkbox-l-tip: url('../../component/_whitepaper/image/brand/checkbox_l_tip.svg'); /*  */
+
+	--input-clear: url('../../component/_whitepaper/image/brand/clear.svg'); /*  */
+
+	--attach-clear: url('../../component/_whitepaper/image/brand/clear.svg'); /*  */
+
+	--radio-dot-background: var(--color-control-default); /* Фон точки */
+
+
+
+	/* --- Полный кастом --- */
+	/* Attach */
+	--attach-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт attach */
+	--attach-size-s-fontSize: 13px;/* Размер текста у s-attach */
+	--attach-size-m-fontSize: 15px; /* Размер текста у m-attach */
+	--attach-size-l-fontSize: 18px; /* Размер текста у l-attach */
+	--attach-size-xl-fontSize: 20px; /* Размер текста у xl-attach */
+
+	--attach-size-s-clear-width: 10px; /* Ширина отчищающего блока (с крестиком) у s-attach */
+	--attach-size-s-clear-height: 14px; /* Высота отчищающего блока (с крестиком) у s-attach */
+
+	--attach-size-m-clear-width: 10px; /* Ширина отчищающего блока (с крестиком) у m-attach */
+	--attach-size-m-clear-height: 14px; /* Высота отчищающего блока (с крестиком) у m-attach */
+
+	--attach-size-l-clear-width: 14px; /* Ширина отчищающего блока (с крестиком) у l-attach */
+	--attach-size-l-clear-height: 14px; /* Высота отчищающего блока (с крестиком) у l-attach */
+
+	--attach-size-xl-clear-width: 14px; /* Ширина отчищающего блока (с крестиком) у xl-attach */
+	--attach-size-xl-clear-height: 14px; /* Высота отчищающего блока (с крестиком) у xl-attach */
+	/* /Attach */
+
+
+	/* Button */
+	--button-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт у button */
+
+	--button-borderRadius: var(--out-radius); /* Скуругление краев внешней части у button */
+	--button-before-borderRadius: var(--in-radius); /* Скуругление краев внутренней части у button */
+
+	--control-group-borderRadius: 0px; /* Скуругление краев внешней части группы контролов */
+	--control-group-before-borderRadius: 0px; /* Скуругление краев внутренней части группы контролов */
+
+	--control-group-first-child-borderRadius: var(--out-radius) 0 0 var(--out-radius); /* Скуругление краев внешней части первого контрола */
+	--control-group-first-child-before-borderRadius: var(--in-radius) 0 0 var(--in-radius);  /* Скуругление краев внутренней части первого контрола */
+
+	--control-group-last-child-borderRadius: 0 var(--out-radius) var(--out-radius) 0; /* Скуругление краев внешней части последнего контрола */
+	--control-group-last-child-before-borderRadius: 0 var(--in-radius) var(--in-radius) 0; /* Скуругление краев внутренней части последннго контрола */
+
+	--control-group-only-child-borderRadius: var(--out-radius); /* Скругление краве внешней части любого дочернего элмемента */
+	--control-group-only-child-before-borderRadius: var(--in-radius); /* Скуругление краев внутренней части любого дочернего элмемента */
+
+	--control-group-last-child-before-border: var(--border-space); /* Отступ правой внутренний части у control-group на размер бордера  */
+
+	--button-size-s-font: 13px; /* Размер текста текста у s-button */
+	--button-size-s-lineHeight: 32px; /* Межстрочечный интервал у s-button */
+
+	--button-size-m-font: 15px; /* Размер текста у m-button */
+	--button-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-button */
+
+	--button-size-l-font: 18px; /* Размер текста у l-button */
+	--button-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у l-button */
+
+	--button-size-xl-font: 20px; /* Размер текста у xl-button */
+	--button-size-xl-lineHeight: 48px; /* Межстрочечный интервал текста у xl-button */
+
+	--button-before-space: 0px; /* Отступ внутренний части у button на размер бордера */
+
+	--button-size-s-icon-width: 24px; /* Ширина иконки у s-button */
+	--button-size-m-icon-width: 32px; /* Ширина иконки у m-button */
+	--button-size-l-icon-width: 40px;/* Ширина иконки у l-button */
+	--button-size-xl-icon-width: 40px; /* Ширина иконки у xl-button */
+
+	--button-size-s-text-margin: 0 13px; /* Внешние оступы у s-button */
+	--button-size-m-text-margin: 0 15px; /* Внешние оступы у m-button */
+	--button-size-l-text-margin: 0 18px; /* Внешние оступы у l-button */
+	--button-size-xl-text-margin: 0 20px; /* Внешние оступы у xl-button */
+
+	--button-focused-boxShadow: 0 0 0 1px; /* Тень(бордер) у button в фокуснутом состоянии*/
+	--button-focused-boxShadow-inset: 0 0 0 1px; /* Внутренняя тень (бордер) у button в фокуснутом состоянии */
+	--button-pseudo-before-boxShadow: 0 0 0 1px; /* Тень (бордер) ховернутых у pseudo-button */
+	--button-pseudo-hovered-boxShadow: 0 0 0 1px; /* Тень (бордер) ховернутых у pseudo-button  */
+	--button-pseudo-focused-before-boxShadow: 0 0 0 1px; /* Тень (бордер) нажатых у pseudo-button */
+	--button-pseudo-pressed-boxShadow: 0 0 0 1px;
+
+	--button-checked-before-boxShadow: 0 0 0 1px; /* Тень (бордер) внутренней части button при чеке */
+	--button-cheched-hovered-before-boxShadow: 0 0 0;  /* Тень (бордер) внутренней части чекнутых button при наведении */
+	--button-cheched-pseudo-before-boxShadow: 0 0 0 1px; /* Тень (бордер) внутренней части pseudo-button при чеке */
+	/* /Button */
+
+
+	/* Checkbox */
+	--checkbox-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт для checkbox */
+
+	--checkbox-borderRadius: var(--checkbox-out-radius); /* Скругление краёв у внешней части checkbox */
+	--checkbox-before-borderRadius: var(--checkbox-in-radius); /* Скругление краев внутренней части checkbox */
+
+	--checkbox-before-space: var(--checkbox-border-space); /* Отступ у внутренеей части checkbox на размер бордера */
+
+	--checkbox-after-space: 0px; /* Отступ иконки (галочки) у checkbox */
+
+	--checkbox-size-m-fontSize: 15px; /* Размер текста у m-checkbox */
+	--checkbox-size-m-width: 16px; /* Ширина у m-checkbox */
+	--checkbox-size-m-height: 16px; /* Высота у m-checkbox */
+	--checkbox-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-checkbox */
+	--checkbox-size-m-marginRight: 5px; /* Внежний правый отступ у m-checkbox (от текса) */
+	--checkbox-size-m-top: 2px; /* Верхний отступ у m-checkbox */
+	--checkbox-size-m-transformY: -5px; /* Трансформация галочки при появлении/скрытии у m-checkbox */
+
+	--checkbox-size-m-after-width: 16px;  /* Ширина иконки (галочки) у m-checkbox */
+	--checkbox-size-m-after-height: 16px;  /* Высота иконки (галочки) у m-checkbox */
+
+	--checkbox-size-l-fontSize: 18px; /* Размер текста у l-checkbox */
+	--checkbox-size-l-width: 20px; /* Ширина у l-checkbox */
+	--checkbox-size-l-height: 20px; /* Высота у l-checkbox */
+	--checkbox-size-l-lineHeight: 42px;  /* Межстрочечный интервал текста у l-checkbox */
+	--checkbox-size-l-marginRight: 8px; /* Внешний правый отступ у l-checkbox (от текса) */
+	--checkbox-size-l-top: 3px;/* Верхний отступ у l-checkbox */
+	--checkbox-size-l-transformY: -5px; /* Трансформация галочки при появлении/скрытии у l-checkbox */
+
+	--checkbox-size-l-after-width: 20px;  /* Ширина иконки (галочки) l-checkbox  1.200em*/
+	--checkbox-size-l-after-height: 20px;  /* Высота иконки (галочки) l-checkbox 1.200em*/
+
+	--checkbox-focused-boxShadow: 0 0 0 1px; /* Внешняя тень у checkbox при фокусе */
+	--checkbox-focused-inset-boxShadow: 0 0 0 1px; /* Внутреняя тень у checkbox при фокусе */
+
+	--checkbox-disabled-checked-opacity: 0.4; /* Прозрачность у checkbox в состоянии disable */
+
+	--checkbox-line-size-m-marginRight: 13px; /* Правый отступ у m-checkbox с текстом  */
+	--checkbox-line-size-l-marginRight: 15px; /* Правый оступ у l-checkbox с текстом  */
+	--checkbox-line-last-child-marginRight: 0; /* Правый отступ у последнего checkbox с текстом  */
+	/* /Checkbox */
+
+
+	/* Input */
+	--input-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт инпута */
+
+	--input-before-space: var(--border-space); /* Отступ верхний у внутренний части input на размер бордера */
+	--input-focused-boxShadow: 0 0 0 var(--border-space); /* Тень у фокуснутого input */
+	--input-focused-inset-boxShadow: 0 0 0 0; /* Внутренняя тень у фокуснутого input */
+
+	--input-borderRadius: 0px; /* Внешний у input */
+	--input-before-borderRadius: 0px; /* Внутренний бордер-радиус у input */
+
+	--input-size-s-m-clear-width: 32px; /* Ширина отчищающего блока (с крестиком) у класс s-m*/
+	--input-size-s-m-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у s-m*/
+
+	--input-size-l-xl-clear-width: 40px; /* Ширина отчищающего блока (с крестиком) у l-xl*/
+	--input-size-l-xl-clear-height: 100%; /* Высота отчищающего блока (с крестиком) у l-xl*/
+
+	--input-size-s-fontSize: 13px; /* Тень у фокуснутого s-input */
+	--input-size-s-lineHeight: 32px; /* Межстрочечный интервал у s-input */
+	--input-size-s-control-height: 32px; /* Высота самого s-input */
+	--input-size-s-control-padding: 0 6px; /* Отступы самого s-input */
+	--input-size-s-has-clear-paddingRight: 23px; /* Оступп правый под размер иконки очистить (крестик) у s-input */
+
+	--input-size-m-fontSize: 15px; /* Тень у фокуснутого m-input */
+	--input-size-m-lineHeight: 36px; /* Межстрочечный интервал у m-input */
+	--input-size-m-control-height: 36px; /* Высота самого m-input */
+	--input-size-m-control-padding: 0 10px; /* Отступы самого m-input */
+	--input-size-m-has-clear-paddingRight: 31px; /* Оступп правый под размер иконки очистить (крестик) у m-input */
+	--input-size-m-clear-width: 28px; /* Ширина отчищающего блока (с крестиком) у m-input */
+	--input-size-m-clear-height: 28px; /* Высота отчищающего блока (с крестиком) у m-input */
+
+	--input-size-l-fontSize: 18px; /* Тень у l-input при фокусе */
+	--input-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у l-input */
+	--input-size-l-control-height: 42px; /* Высота самого l-input */
+	--input-size-l-control-padding:  0 12px; /* Внутренние отступы самого l-input */
+	--input-size-l-has-clear-paddingRight: 32px; /* Внутренний правый остут под размер иконки очистить (крестик) у l-input */
+
+	--input-size-xl-fontSize: 20px; /* Размер текста у xl-input при фокусе */
+	--input-size-xl-lineHeight: 48px; /* Межстрочечный интервал текста у xl-input */
+	--input-size-xl-control-height: 48px; /* Высота у самого xl-input */
+	--input-size-xl-control-padding: 0 13px; /* Внутренние отступы у самого xl-input */
+	--input-size-xl-has-clear-paddingRight: 38px; /* Правый внутренний оступ под размер иконки очистить (крестик) у xl-input */
+	--input-size-xl-clear-width: 38px; /* Ширина отчищающего блока (с крестиком) у xl-input */
+	--input-size-xl-clear-height: 38px; /* Высота отчищающего блока (с крестиком) у xl-input */
+
+	--control-group-before-right: 0; /* Правый отступ внутренней части контролла в control-group */
+	--control-group-input-focused-before-right: 1px;  /* Правый отступ внутренней части контролла в control-group при фокусе */
+	--control-group-last-child-right: 1px; /* Правый оступ у последнего контрола в control-group */
+	/* /Input */
+
+
+	/* Link */
+	--link-textDecoration: underline; /* Подчеркивание у link */
+	--link-transition: color 0.15s ease-out; /* Анимация у link */
+
+	--link-fontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Шрифт ссылки */
+
+	--link-size-s: 13px; /* Размер текста у s-link */
+	--link-size-m: 15px; /* Размер текста у m-link */
+	--link-size-l: 18px; /* Размер текста у l-link */
+	--link-size-xl: 20px; /* Размер текста у xl-link */
+	/* /Link */
+
+
+	/* Modal */
+	--modal-margin: 5px; /* Отступы у модалки */
+	--modal-borderWidth: 1px; /* Бордеры у модалки */
+	/* /Modal */
+
+
+	/* Popup */
+	--popup-boxShadow: 0 0 0 1px; /* Короткая тень у popup */
+	--popup-long-boxShadow: 0 10px 20px -5px; /* Длинная тень у popup */
+	/* Popup */
+
+
+	/* Progressbar */
+	--progressbar-height: 2px; /* Высота у progressbar */
+	/* /Progressheight */
+
+
+	/* Radio */
+	--radio-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт у radio */
+
+	--radio-borderRadius: 50%; /* Скругление внешних краев у radio */
+	--radio-before-borderRadius: 50%; /* Скругление внутреннийх краев у radio */
+	--radio-before-space: var(--radio-border-space); /* Отступ внутренней часта у radio на размер бордера */
+
+	--radio-size-m-fontSize: 15px; /* Размер текста у m-radio */
+	--radio-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-radio */
+	--radio-size-m-top: 2px; /* Верхний отступ у m-radio */
+	--radio-size-m-width: 16px; /* Ширина у m-radio */
+	--radio-size-m-height: 16px; /* Высота у m-radio */
+	--radio-size-m-marginRight: 5px;/* Правый отступ у m-radio (от текста) */
+
+	--radio-width-m-after: 4px;
+	--radio-height-m-after: 4px;
+
+	--radio-size-l-fontSize: 18px; /* Размер текста у l-radio */
+	--radio-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у l-radio */
+	--radio-size-l-top: 3px; /* Верхний отступ у l-radio */
+	--radio-size-l-width: 20px; /* Ширина у l-radio */
+	--radio-size-l-height: 20px; /* Высота у l-radio */
+	--radio-size-l-marginRight: 8px; /* Правый отступ у l-radio (от текста) */
+
+	--radio-width-l-after: 6px;
+	--radio-height-l-after: 6px;
+
+	--radio-checked-after-borderRadius: 50%; /* Скругление внешних краев у radio в чекнутом состоянии */
+	--radio-checked-after-background: var(--radio-dot-background); /* Цвет точки у чекбокса */
+
+	--radio-focused-boxShadow: 0 0 0 1px; /* Тень (бордер) у radio при фокусе */
+	--radio-focused-inset-boxShadow: 0 0 0 1px; /* Внутренняя тень (бордер) у радио при фокусе */
+
+	--radio-line-size-m-marginRight: 15px; /* Внешний правый отступ у m-radio с текстом  */
+	--radio-line-size-l-marginRight: 18px; /* Внешний правый отступ у l-radio с текстом  */
+	--radio-line-last-child-marginRight: 0; /* Внешний правый отступ у последнего радио с текстом  */
+	/* /Radio */
+
+
+	/* Checkbox-group */
+	--checkbox-group-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-check в списки */
+	--checkbox-group-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у  l-check в списке */
+	/* /Checkbox-group */
+
+
+	/* Radio-group */
+	--radio-group-size-m-lineHeight: 36px; /* Межстрочечный интервал текста у m-radio в списки (расстояние между radio) */
+	--radio-group-size-l-lineHeight: 42px; /* Межстрочечный интервал текста у  l-radio в списке  (расстояние между radio) */
+	
+	--radio-group-size-m-button-fontSize: 15px; /* Размер текста у m-radio-button */
+	--radio-group-size-l-button-fontSize: 18px; /* Размер текста у l-radio-button */
+	/* /Radio-group */
+
+
+	/* Select */
+	--select-button-size-s-paddingRight: 27px; /* Внутренний правый отступ у s-slect-button (на ширину иконки стрелки) */
+	--select-button-size-s-icon-width: 27px; /* Ширина иконки (стрелки) s-slect-button */
+
+	--select-button-size-m-paddingRight: 34px; /* Внутренний правый отступ у m-slect-button (на ширину иконки стрелки) */
+	--select-button-size-m-icon-width: 36px; /* Ширина иконки (стрелки) m-slect-button */
+
+	--select-button-size-l-paddingRight: 38px; /* Внутренний правый отступ у l-slect-button (на ширину иконки стрелки) */
+	--select-button-size-l-icon-width: 39px; /* Ширина иконки (стрелки) у l-slect-button */
+
+	--select-button-size-xl-paddingRight: 42px; /* Внутренний правый отступ у xl-slect-button (на ширину иконки стрелки) */
+	--select-button-size-xl-icon-width: 36px; /* Ширина иконки (стрелки) у xl-slect-button */
+	/* /Select */
+
+
+	/* Menu*/
+	--menu-fontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* */
+	--menu-group-borderWidth: 1px; /* Бордер у menu-group меню */
+
+	--menu-size-s-fontSize: 13px; /* */
+	--menu-size-s-lineHeight: 36px; /* */
+	--menu-size-s-vertSpace: 3px; /* */
+	--menu-size-s-horSpace: 9px; /* */
+
+	--menu-size-m-fontSize: 15px; /* */
+	--menu-size-m-lineHeight: 40px; /* */
+	--menu-size-m-vertSpace: 4px; /* */
+	--menu-size-m-horSpace: 15px; /* */
+
+	--menu-size-l-fontSize: 18px; /* */
+	--menu-size-l-lineHeight: 48px; /* */
+	--menu-size-l-vertSpace: 7px; /* */
+	--menu-size-l-horSpace: 18px; /* */
+
+	--menu-size-xl-fontSize: 20px; /* */
+	--menu-size-xl-lineHeight: 48px; /* */
+	--menu-size-xl-vertSpace: 5px; /* */
+	--menu-size-xl-horSpace: 26px; /* */
+
+	--menu-item-link-after-space: 0px; /* Отступ кликабельной области у menu-item-link в списке */ /*Не нашёл куда воткнуть!!!!!!!!!!!!!!!!!*/
+	/* /Menu */
+
+
+	/* Textarea */
+	--textarea-fontFamily: Arial, Helvetica, sans-serif; /* Шрифт у textarea */
+	--textarea-minHeight: 2em; /* Минимальная высота у textarea */
+
+	--textarea-focused-boxShadow: 0 0 0 1px; /* Тень у textarea при фокусе */
+	--textarea-borderWidth: 2px; /* Ширина бордера у textarea */
+	--textarea-borderRaduis: var(--out-radius); /* Бордер-радиус у input */
+
+	--textarea-size-s-fontSize: 13px; /* Размер текста s-textarea */
+	--textarea-size-s-lineHeight: 24px; /* Межстрочечный интервал текста у s-textarea */
+	--textarea-size-s-paddingLeft: 6px; /* Внутренний левый отступ у s-textarea */
+
+	--textarea-size-m-fontSize: 15px; /* Размер текста у m textarea */
+	--textarea-size-m-lineHeight: 28px; /* Межстрочечный интервал текста у m-textarea */
+	--textarea-size-m-padding: 3px 5px; /* Внутренние отступы у m-textarea */
+
+	--textarea-size-l-fontSize: 18px; /* Размер текста у l-textarea */
+	--textarea-size-l-lineHeight: 32px; /* Межстрочечный интервал текста у l-textarea */
+	--textarea-size-l-padding: 5px 8px; /* Внутренние отступы у l-textarea */
+
+	--textarea-size-xl-fontSize: 20px; /* Размер текста у xl-textarea */
+	--textarea-size-xl-lineHeight: 38px; /* Межстрочечный интервал текста у xl-textarea */
+	--textarea-size-xl-paddingLeft: 12px; /* Внутренний левый отступ у xl-textarea */
+	/* Textarea */
+
+
+	/* Spiner */
+	--spin-borderWidth: 2px; /* Ширина бордера у спиннера */
+
+	--size-list-xs: 16px;
+	--size-list-s: 24px;
+	--size-list-m: 28px;
+	--size-list-l: 32px;
+	--size-list-xl: 38px;
+	/* Spiner */
+
+
+	/* Page */
+	--page-fontFamily: Arial, Helvetica, sans-serif;  /* Шрифт страниы */
+	/* Page */
+
+}
